@@ -11,3 +11,6 @@ venv/
 # Arquivos temporários do Python
 __pycache__/
 *.pyc
+
+# Arquivos estáticos gerados pelo Django
+staticfiles/
