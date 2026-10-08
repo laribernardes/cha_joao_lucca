@@ -1,0 +1,13 @@
+# Informações sensíveis
+.env
+.env.*
+
+# Ambiente virtual
+venv/
+
+# Bancos de dados locais e backups
+*.sqlite3
+
+# Arquivos temporários do Python
+__pycache__/
+*.pyc

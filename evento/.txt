@@ -1,0 +1,51 @@
+from django.contrib import admin
+from .models import Convidado, Presente, Acompanhante
+
+@admin.register(Presente)
+class PresenteAdmin(admin.ModelAdmin):
+
+    list_display = (
+        "nome",
+        "descricao",
+        "disponivel",
+    )
+
+
+@admin.register(Convidado)
+class ConvidadoAdmin(admin.ModelAdmin):
+
+    list_display = (
+        "nome",
+        "presenca",
+        "acompanhantes",
+        "tamanho_fralda",
+        "presente",
+        "data_confirmacao",
+    )
+
+    list_filter = (
+        "presenca",
+        "tamanho_fralda",
+        "presente",
+    )
+
+    search_fields = (
+        "nome",
+    )
+
+@admin.register(Acompanhante)
+class AcompanhanteAdmin(admin.ModelAdmin):
+    list_display = (
+        "convidado",
+        "tipo",
+        "tamanho_fralda",
+    )
+
+    list_filter = (
+        "tipo",
+        "tamanho_fralda",
+    )
+
+    search_fields = (
+        "convidado__nome",
+    )

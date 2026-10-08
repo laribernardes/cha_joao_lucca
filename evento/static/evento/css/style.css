@@ -1,0 +1,5923 @@
+/* =========================================
+   JOÃO LUCCA
+   CHÁ DE BEBÊ
+   
+========================================= */
+
+
+:root {
+
+    --blue-dark: #173f5a;
+
+    --blue: #4d8db3;
+
+    --blue-light: #dcecf4;
+
+    --cream: #faf8f3;
+
+    --white: #ffffff;
+
+    --gold: #c6a26b;
+
+    --gold-light: #e4d2b3;
+
+    --text: #4f606a;
+
+}
+
+
+* {
+
+    margin: 0;
+
+    padding: 0;
+
+    box-sizing: border-box;
+
+}
+
+
+html {
+
+    scroll-behavior: smooth;
+
+}
+
+
+body {
+
+    background: var(--cream);
+
+    color: var(--text);
+
+    font-family: "DM Sans", sans-serif;
+
+}
+
+
+/* =========================================
+   HEADER
+==v======================================= */
+
+
+.header {
+
+    position: fixed;
+
+    top: 0;
+
+    left: 0;
+
+    width: 100%;
+
+    height: 82px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 0 7%;
+
+    background: rgba(250, 248, 243, .92);
+
+    backdrop-filter: blur(15px);
+
+    border-bottom: 1px solid
+        rgba(198, 162, 107, .20);
+
+    z-index: 1000;
+
+}
+
+
+.brand {
+
+    text-decoration: none;
+
+    display: flex;
+
+    flex-direction: column;
+
+}
+
+
+.brand span {
+
+    color: var(--blue-dark);
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: 22px;
+
+    letter-spacing: 4px;
+
+}
+
+
+.brand small {
+
+    color: var(--gold);
+
+    font-size: 7px;
+
+    letter-spacing: 4px;
+
+    margin-top: 2px;
+
+}
+
+
+nav {
+
+    display: flex;
+
+    gap: 38px;
+
+}
+
+
+nav a {
+
+    color: var(--blue-dark);
+
+    text-decoration: none;
+
+    font-size: 11px;
+
+    letter-spacing: 1px;
+
+    position: relative;
+
+}
+
+
+nav a::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+
+    bottom: -7px;
+
+    width: 0;
+
+    height: 1px;
+
+    background: var(--gold);
+
+    transition: .3s;
+
+}
+
+
+nav a:hover::after {
+
+    width: 100%;
+
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+
+.hero {
+
+    min-height: 100vh;
+
+    position: relative;
+
+    overflow: hidden;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+    
+    background:
+
+        radial-gradient(
+            circle at 50% 40%,
+            #ffffff 0%,
+            #faf8f3 45%,
+            #eaf3f7 100%
+        );
+
+}
+
+
+/* Moldura */
+
+.hero::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 28px;
+
+    border: 1px solid
+        rgba(198, 162, 107, .25);
+
+    z-index: 2;
+
+    pointer-events: none;
+
+}
+
+
+
+
+ 
+/* =========================================
+   HERO — JOÃO LUCCA
+========================================= */
+
+.hero {
+    margin-top: 80px;
+    min-height: calc(100vh - 80px);
+
+    position: relative;
+    overflow: hidden;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    background-image:
+        linear-gradient(
+            rgba(255, 255, 255, 0.08),
+            rgba(255, 255, 255, 0.08)
+        ),
+        url("../img/hero-joao-lucca.png");
+
+    background-size: cover;
+    background-position: center 30%;
+    background-repeat: no-repeat;
+
+    /* Animação suave do cenário */
+    animation: movimentoCenario 20s ease-in-out infinite alternate;
+}
+
+
+/* =========================================
+   MOVIMENTO SUAVE DO CENÁRIO
+========================================= */
+
+@keyframes movimentoCenario {
+
+    0% {
+        background-position: center 30%;
+        background-size: 100% auto;
+    }
+
+    50% {
+        background-position: 51% 31%;
+        background-size: 102% auto;
+    }
+
+    100% {
+        background-position: 49% 29%;
+        background-size: 104% auto;
+    }
+
+}
+
+
+/* =========================================
+   MOLDURA DOURADA
+========================================= */
+
+.hero::before {
+    content: "";
+
+    position: absolute;
+    inset: 28px;
+
+    border: 1px solid rgba(198, 162, 107, 0.25);
+
+    pointer-events: none;
+
+    z-index: 5;
+}
+
+
+/* =========================================
+   LEVE BRILHO PASSANDO PELO CENÁRIO
+========================================= */
+
+.hero::after {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: -100%;
+
+    width: 55%;
+    height: 100%;
+
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.12),
+        transparent
+    );
+
+    transform: skewX(-12deg);
+
+    pointer-events: none;
+
+    z-index: 4;
+
+    animation: none;
+}
+
+
+@keyframes brilhoHero {
+
+    0% {
+        left: -100%;
+    }
+
+    35% {
+        left: 120%;
+    }
+
+    100% {
+        left: 120%;
+    }
+
+}
+
+
+/* =========================================
+   CONTEÚDO DO HERO
+========================================= */
+
+.hero-content {
+    position: relative;
+
+    z-index: 10;
+
+    width: min(720px, 90%);
+
+    padding: 70px 30px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    color: #174f78;
+
+    text-shadow:
+        0 2px 10px rgba(255, 255, 255, 0.8);
+}
+
+
+/* =========================================
+   PEQUENO TEXTO SUPERIOR
+========================================= */
+
+.eyebrow {
+    font-size: 13px;
+
+    letter-spacing: 5px;
+
+    font-weight: 600;
+
+    color: #397fa8;
+
+    margin-bottom: 12px;
+}
+
+
+/* =========================================
+   ORNAMENTO
+========================================= */
+
+.hero-ornament {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 18px;
+
+    margin: 20px 0;
+}
+
+
+.hero-ornament span {
+    width: 100px;
+    height: 1px;
+
+    background: var(--gold);
+}
+
+
+.hero-ornament b {
+    color: var(--blue);
+
+    font-weight: 400;
+}
+
+
+/* =========================================
+   NOME JOÃO LUCCA
+========================================= */
+
+.hero h1 {
+    margin: 10px 0 5px;
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: clamp(55px, 8vw, 90px);
+
+    font-weight: 500;
+
+    color: #17679a;
+
+    line-height: 1;
+}
+
+
+/* =========================================
+   CHÁ DE BEBÊ
+========================================= */
+
+.hero h2 {
+    margin: 15px 0 20px;
+
+    font-size: 13px;
+
+    letter-spacing: 6px;
+
+    font-weight: 500;
+
+    color: #397fa8;
+}
+
+
+/* =========================================
+   DESCRIÇÃO
+========================================= */
+
+.hero-description {
+    max-width: 500px;
+
+    font-size: 18px;
+
+    line-height: 1.7;
+
+    color: #315d78;
+
+    margin: 0 auto 25px;
+}
+
+
+
+/* =========================================
+   DATA — DESTAQUE PRINCIPAL
+========================================= */
+
+.hero-date {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 18px;
+
+    margin: 35px 0 45px;
+
+    color: #245f83;
+
+    position: relative;
+}
+
+
+/* Número do dia */
+
+.hero-date strong {
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: 72px;
+
+    font-weight: 500;
+
+    line-height: 0.9;
+
+    color: #245f83;
+}
+
+
+/* Novembro + ano */
+
+.hero-date div {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    justify-content: center;
+
+    gap: 3px;
+}
+
+
+.hero-date span {
+    font-size: 15px;
+
+    letter-spacing: 4px;
+
+    font-weight: 500;
+
+    color: #245f83;
+}
+
+
+.hero-date small {
+    font-size: 13px;
+
+    letter-spacing: 3px;
+
+    color: #6d8795;
+}
+
+
+/* Pequeno detalhe dourado */
+
+.hero-date::after {
+    content: "";
+
+    position: absolute;
+
+    bottom: -22px;
+
+    width: 45px;
+    height: 1px;
+
+    background: var(--gold);
+
+    opacity: 0.7;
+}
+
+/* =========================================
+   RESPONSIVIDADE DA CAPA
+========================================= */
+
+.hero {
+    width: 100%;
+    min-height: 100vh;
+    height: 100dvh;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Imagem/fundo da capa */
+.hero::before {
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+/* Conteúdo da capa */
+.hero-content {
+    width: min(90%, 700px);
+    max-width: 700px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+}
+
+/* Ajuste para telas menores */
+@media (max-width: 768px) {
+
+    .hero {
+    min-height: 100dvh;
+    height: auto;
+}
+
+    .hero-content {
+        width: 88%;
+        max-width: 500px;
+    }
+
+    .hero-date strong {
+        font-size: clamp(52px, 13vw, 72px);
+    }
+
+    .hero-date span {
+        font-size: clamp(11px, 2.8vw, 15px);
+    }
+
+    .hero-date small {
+        font-size: clamp(10px, 2.5vw, 13px);
+    }
+}
+
+/* Celulares menores */
+@media (max-width: 480px) {
+
+    .hero-content {
+        width: 86%;
+    }
+
+    .hero-date {
+        gap: 13px;
+        margin-top: 28px;
+        margin-bottom: 38px;
+    }
+
+    .hero-date strong {
+        font-size: clamp(48px, 15vw, 62px);
+    }
+
+    .hero-date span {
+        font-size: 10px;
+        letter-spacing: 2.5px;
+    }
+
+    .hero-date small {
+        font-size: 10px;
+        letter-spacing: 2px;
+    }
+}
+
+
+/* =========================================
+   BOTÃO
+========================================= */
+
+.premium-button {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    padding: 15px 30px;
+
+    border-radius: 50px;
+
+    background: rgba(45, 133, 181, 0.92);
+
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    letter-spacing: 1.5px;
+
+    box-shadow:
+        0 10px 25px rgba(45, 133, 181, 0.20);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+.premium-button span {
+    font-size: 20px;
+
+    transition:
+        transform 0.3s ease;
+}
+
+
+.premium-button:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 15px 30px rgba(45, 133, 181, 0.30);
+}
+
+
+.premium-button:hover span {
+    transform: translateX(5px);
+}
+
+
+/* =========================================
+   ROLE PARA DESCOBRIR
+========================================= */
+
+.scroll-indicator {
+    position: absolute;
+
+    bottom: 28px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    color: var(--blue-dark);
+
+    font-size: 9px;
+    font-weight: 500;
+
+    letter-spacing: 4px;
+
+    white-space: nowrap;
+
+    z-index: 10;
+
+    animation:
+        aparecerScroll 1.8s ease both;
+}
+
+
+/* Linha vertical */
+
+.scroll-indicator span {
+    display: block;
+
+    width: 1px;
+    height: 38px;
+
+    margin: 0 auto 10px;
+
+    background:
+        linear-gradient(
+            to bottom,
+            transparent,
+            var(--gold)
+        );
+
+    animation:
+        linhaScroll 2s ease-in-out infinite;
+}
+
+
+/* Animação suave */
+
+@keyframes linhaScroll {
+
+    0%,
+    100% {
+        opacity: 0.45;
+        transform: translateY(0);
+    }
+
+    50% {
+        opacity: 1;
+        transform: translateY(6px);
+    }
+}
+
+
+@keyframes aparecerScroll {
+
+    from {
+        opacity: 0;
+        transform: translate(-50%, 10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate(-50%, 0);
+    }
+}
+
+
+/* Celular */
+
+@media (max-width: 600px) {
+
+    .scroll-indicator {
+        bottom: 22px;
+
+        font-size: 8px;
+
+        letter-spacing: 3px;
+    }
+
+    .scroll-indicator span {
+        height: 32px;
+
+        margin-bottom: 8px;
+    }
+}
+
+
+
+/* =========================================
+   ACESSIBILIDADE
+========================================= */
+
+/* Pessoas que preferem menos movimento
+   não terão a animação do cenário */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .hero,
+    .hero::after {
+        animation: none;
+    }
+
+}
+
+
+/* mm=========================================
+  m HERO — CELULAR
+=m======================================== */
+
+@media (max-width: 600px) {
+
+    .hero {
+        margin-top: 70px;
+
+        min-height: calc(100vh - 70px);
+
+        background-position: center 30%;
+    }
+
+
+    .hero::before {
+        inset: 15px;
+    }
+
+
+    .hero-content {
+        padding: 100px 25px 70px;
+
+        width: 100%;
+    }
+
+
+    .hero h1 {
+        font-size: 90px;
+    }
+
+
+    .hero h2 {
+        font-size: 15px;
+
+        letter-spacing: 5px;
+    }
+
+
+    .hero-description {
+        font-size: 17px;
+    }
+
+
+    .hero-date strong {
+        font-size: 48px;
+    }
+
+
+    .hero-ornament span {
+        width: 60px;
+    }
+
+}
+
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+
+
+/* =========================================
+   PARA QUEM AMAMOS
+========================================= */
+
+.family-message {
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 130px 20px;
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 50% 20%,
+            rgba(255,255,255,0.98) 0%,
+            rgba(238,247,251,0.95) 45%,
+            #dcecf4 100%
+        );
+
+    text-align: center;
+}
+
+
+/* =========================================
+   MOLDURA
+========================================= */
+
+.family-message::before {
+    content: "";
+    position: absolute;
+    inset: 35px;
+
+    border: 1px solid rgba(198,162,107,0.20);
+
+    pointer-events: none;
+}
+
+
+/* =========================================
+   NUVEM DECORATIVA
+========================================= */
+
+.family-message::after {
+    content: "";
+
+    position: absolute;
+
+    width: 520px;
+    height: 180px;
+
+    top: -55px;
+    left: -80px;
+
+    background:
+        radial-gradient(
+            ellipse at center,
+            rgba(255,255,255,0.85) 0%,
+            rgba(255,255,255,0.45) 45%,
+            transparent 70%
+        );
+
+    filter: blur(8px);
+    opacity: 0.8;
+
+    pointer-events: none;
+
+    animation:
+        nuvemMensagem 18s ease-in-out infinite alternate;
+
+    z-index: 0;
+}
+
+
+@keyframes nuvemMensagem {
+
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(100px);
+    }
+}
+
+
+/* =========================================
+   CONTEÚDO PRINCIPAL
+========================================= */
+
+.family-message-content {
+    position: relative;
+
+    z-index: 2;
+
+    width: 100%;
+    max-width: 720px;
+
+    margin: 0 auto;
+
+    box-sizing: border-box;
+
+    text-align: center;
+
+    animation:
+        aparecerMensagem 1.4s ease both;
+}
+
+
+/* =========================================
+   ORNAMENTO
+========================================= */
+
+.family-message-decoration {
+    position: relative;
+
+    z-index: 2;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 18px;
+
+    width: 100%;
+
+    margin: 0 auto 30px;
+
+    text-align: center;
+}
+
+
+.family-message-decoration span {
+    display: block;
+
+    width: 90px;
+    height: 1px;
+
+    background:
+        linear-gradient(
+            to right,
+            transparent,
+            var(--gold)
+        );
+}
+
+
+.family-message-decoration span:last-child {
+    background:
+        linear-gradient(
+            to left,
+            transparent,
+            var(--gold)
+        );
+}
+
+
+.family-message-decoration b {
+    color: var(--gold);
+
+    font-size: 14px;
+    font-weight: 400;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================
+   LABEL
+========================================= */
+
+.family-message-label {
+    display: block;
+
+    width: 100%;
+
+    margin: 0 auto 18px;
+
+    color: var(--gold);
+
+    font-size: 9px;
+
+    letter-spacing: 5px;
+
+    text-align: center;
+}
+
+
+/* =========================================
+   TÍTULO
+========================================= */
+
+.family-message-content h2 {
+    width: 100%;
+
+    margin: 0 auto;
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: clamp(45px, 7vw, 68px);
+
+    font-weight: 400;
+
+    color: var(--blue-dark);
+
+    line-height: 1;
+
+    text-align: center;
+}
+
+
+/* =========================================
+   LINHA
+========================================= */
+
+.family-message-line {
+    width: 70px;
+    height: 1px;
+
+    margin: 28px auto 35px;
+
+    background: var(--gold);
+}
+
+
+/* =========================================
+   TEXTOS
+========================================= */
+
+.family-message-content p {
+    display: block;
+
+    width: 100%;
+    max-width: 650px;
+
+    margin: 0 auto 22px;
+
+    box-sizing: border-box;
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: 21px;
+
+    line-height: 1.8;
+
+    color: #536873;
+
+    text-align: center;
+}
+
+
+.family-message-content .family-message-intro {
+    font-size: 24px;
+
+    color: var(--blue-dark);
+
+    text-align: center;
+}
+
+
+.family-message-content strong {
+    color: #17679a;
+
+    font-weight: 600;
+}
+
+
+/* =========================================
+   TEXTO FINAL
+========================================= */
+
+.family-message-final {
+    width: 100%;
+
+    margin: 32px auto 0 !important;
+
+    color: var(--blue-dark) !important;
+
+    font-size: 23px !important;
+
+    text-align: center;
+}
+
+
+/* =========================================
+   ASSINATURA
+========================================= */
+
+.family-message-bottom {
+    position: relative;
+
+    z-index: 2;
+
+    width: 100%;
+
+    margin: 45px auto 0;
+
+    text-align: center;
+}
+
+
+.family-message-bottom span {
+    display: block;
+
+    width: 100%;
+
+    margin: 0 auto 5px;
+
+    color: var(--gold);
+
+    font-size: 9px;
+
+    letter-spacing: 4px;
+
+    text-align: center;
+}
+
+
+.family-message-bottom b {
+    display: block;
+
+    width: 100%;
+
+    margin: 0 auto;
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: 28px;
+
+    font-weight: 500;
+
+    color: var(--blue-dark);
+
+    text-align: center;
+}
+
+
+/* =========================================
+   PONTOS DE LUZ
+========================================= */
+
+.family-message-content::before,
+.family-message-content::after {
+    content: "✦";
+
+    position: absolute;
+
+    color: rgba(198,162,107,0.35);
+
+    font-size: 18px;
+
+    pointer-events: none;
+
+    animation:
+        brilhoMensagem 4s ease-in-out infinite alternate;
+}
+
+
+.family-message-content::before {
+    left: -120px;
+    top: 80px;
+}
+
+
+.family-message-content::after {
+    right: -120px;
+    bottom: 100px;
+
+    font-size: 12px;
+
+    animation-delay: 2s;
+}
+
+
+@keyframes brilhoMensagem {
+
+    from {
+        opacity: 0.25;
+        transform: translateY(0);
+    }
+
+    to {
+        opacity: 0.8;
+        transform: translateY(-8px);
+    }
+}
+
+
+/* =========================================
+   ANIMAÇÃO DO CONTEÚDO
+========================================= */
+
+@keyframes aparecerMensagem {
+
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* =========================================
+   CELULAR
+========================================= */
+
+@media (max-width: 600px) {
+
+    .family-message {
+        padding: 100px 20px;
+    }
+
+
+    .family-message::before {
+        inset: 18px;
+    }
+
+
+    .family-message-decoration {
+        gap: 12px;
+    }
+
+
+    .family-message-decoration span {
+        width: 55px;
+    }
+
+
+    .family-message-content {
+        width: 100%;
+        max-width: 100%;
+    }
+
+
+    .family-message-content h2 {
+        font-size: 48px;
+    }
+
+
+    .family-message-content p {
+        width: 100%;
+        max-width: 100%;
+
+        font-size: 19px;
+
+        line-height: 1.7;
+    }
+
+
+    .family-message-content .family-message-intro {
+        font-size: 21px;
+    }
+
+
+    .family-message-final {
+        font-size: 21px !important;
+    }
+
+
+    .family-message-content::before {
+        left: -80px;
+    }
+
+
+    .family-message-content::after {
+        right: -80px;
+    }
+}
+
+/* =========================================
+   INFORMAÇÕES DO EVENTO
+========================================= */
+
+.family-event-info {
+    position: relative;
+    z-index: 3;
+
+    max-width: 650px;
+    margin: 55px auto 45px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    text-align: center;
+}
+
+
+/* DATA */
+
+.family-event-date {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 15px;
+
+    margin-bottom: 28px;
+
+    color: var(--blue-dark);
+}
+
+.family-event-date strong {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 54px;
+    font-weight: 500;
+
+    line-height: 0.9;
+
+    color: var(--blue-dark);
+}
+
+.family-event-date div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    gap: 2px;
+}
+
+.family-event-date span {
+    font-size: 12px;
+
+    letter-spacing: 3px;
+
+    color: var(--blue-dark);
+}
+
+.family-event-date small {
+    font-size: 11px;
+
+    letter-spacing: 2px;
+
+    color: #78909c;
+}
+
+
+/* HORÁRIO */
+
+.family-event-time {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+
+    margin-bottom: 32px;
+}
+
+.family-event-time span {
+    font-size: 9px;
+
+    letter-spacing: 3px;
+
+    color: #78909c;
+
+    margin-bottom: 5px;
+}
+
+.family-event-time strong {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 31px;
+
+    font-weight: 500;
+
+    color: var(--blue-dark);
+}
+
+
+/* LOCAL */
+
+.family-event-location {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 15px;
+
+    max-width: 580px;
+
+    margin-bottom: 28px;
+
+    padding-top: 25px;
+
+    border-top: 1px solid rgba(197, 164, 101, 0.35);
+}
+
+.family-event-location-icon {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 38px;
+    height: 38px;
+
+    flex-shrink: 0;
+
+    border: 1px solid rgba(197, 164, 101, 0.55);
+
+    border-radius: 50%;
+
+    color: var(--gold);
+
+    font-size: 19px;
+}
+
+.family-event-location div {
+    text-align: left;
+}
+
+.family-event-location strong {
+    display: block;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 19px;
+
+    font-weight: 600;
+
+    line-height: 1.35;
+
+    color: var(--blue-dark);
+}
+
+.family-event-location p {
+    margin: 5px 0 0;
+
+    font-size: 12px;
+
+    line-height: 1.6;
+
+    color: #78909c;
+}
+
+
+/* BOTÃO COMO CHEGAR */
+
+.family-event-map-button {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 14px;
+
+    padding: 13px 24px;
+
+    border: 1px solid rgba(197, 164, 101, 0.7);
+
+    border-radius: 30px;
+
+    background: rgba(255, 255, 255, 0.65);
+
+    color: var(--blue-dark);
+
+    text-decoration: none;
+
+    font-size: 9px;
+
+    font-weight: 600;
+
+    letter-spacing: 2.5px;
+
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.family-event-map-button span {
+    font-size: 17px;
+
+    line-height: 1;
+
+    color: var(--gold);
+
+    transition: transform 0.3s ease;
+}
+
+.family-event-map-button:hover {
+    transform: translateY(-2px);
+
+    background: rgba(255, 255, 255, 0.95);
+
+    box-shadow:
+        0 8px 25px rgba(36, 95, 131, 0.10);
+}
+
+.family-event-map-button:hover span {
+    transform: translateX(4px);
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+    .family-event-info {
+        margin-top: 45px;
+        margin-bottom: 35px;
+
+        padding: 0 10px;
+    }
+
+    .family-event-date {
+        margin-bottom: 24px;
+    }
+
+    .family-event-date strong {
+        font-size: 48px;
+    }
+
+    .family-event-date span {
+        font-size: 11px;
+        letter-spacing: 2.5px;
+    }
+
+    .family-event-date small {
+        font-size: 10px;
+    }
+
+    .family-event-time {
+        margin-bottom: 28px;
+    }
+
+    .family-event-time strong {
+        font-size: 28px;
+    }
+
+    .family-event-location {
+        width: 100%;
+
+        gap: 12px;
+
+        padding-top: 22px;
+    }
+
+    .family-event-location-icon {
+        width: 34px;
+        height: 34px;
+
+        font-size: 17px;
+    }
+
+    .family-event-location strong {
+        font-size: 17px;
+    }
+
+    .family-event-location p {
+        font-size: 11px;
+    }
+
+    .family-event-map-button {
+        padding: 12px 21px;
+
+        font-size: 8px;
+
+        letter-spacing: 2px;
+    }
+}
+
+/* =========================================================
+   SEÇÃO DE PRESENTES — JOÃO LUCCA
+   ========================================================= */
+
+.presents-section {
+    position: relative;
+    overflow: hidden;
+    padding: 125px 20px 110px;
+    text-align: center;
+
+    background:
+        radial-gradient(
+            circle at 50% 5%,
+            #ffffff 0%,
+            #f4f9fc 42%,
+            #e2eff5 72%,
+            #d8eaf2 100%
+        );
+}
+
+
+/* brilho superior */
+
+.presents-section::before {
+    content: "";
+    position: absolute;
+
+    width: 600px;
+    height: 240px;
+
+    top: -110px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    background:
+        radial-gradient(
+            ellipse,
+            rgba(255,255,255,0.95) 0%,
+            rgba(255,255,255,0.55) 45%,
+            transparent 72%
+        );
+
+    filter: blur(8px);
+
+    pointer-events: none;
+}
+
+
+/* moldura interna */
+
+.presents-section::after {
+    content: "";
+
+    position: absolute;
+    inset: 35px;
+
+    border: 1px solid rgba(198,162,107,0.18);
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   DECORAÇÃO
+   ========================================================= */
+
+.presents-decoration {
+    position: relative;
+    z-index: 2;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 18px;
+
+    margin-bottom: 28px;
+}
+
+.presents-decoration span {
+    width: 70px;
+    height: 1px;
+
+    background: linear-gradient(
+        to right,
+        transparent,
+        rgba(198,162,107,0.65)
+    );
+}
+
+.presents-decoration span:last-child {
+    background: linear-gradient(
+        to left,
+        transparent,
+        rgba(198,162,107,0.65)
+    );
+}
+
+.presents-decoration b {
+    color: #c6a26b;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+
+/* =========================================================
+   CABEÇALHO
+   ========================================================= */
+
+.presents-header {
+    position: relative;
+    z-index: 2;
+
+    max-width: 700px;
+
+    margin: 0 auto 65px;
+}
+
+.presents-label {
+    display: block;
+
+    margin-bottom: 16px;
+
+    color: #b18b54;
+
+    font-size: 11px;
+    font-weight: 600;
+
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.presents-header h2 {
+    margin: 0;
+
+    color: #304d5d;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: clamp(36px, 5vw, 54px);
+    font-weight: 400;
+
+    line-height: 1.12;
+}
+
+.presents-line {
+    width: 55px;
+    height: 1px;
+
+    margin: 25px auto;
+
+    background: #c6a26b;
+}
+
+.presents-header p {
+    max-width: 610px;
+
+    margin: 0 auto;
+
+    color: #607783;
+
+    font-size: 16px;
+    line-height: 1.9;
+}
+
+.presents-note {
+    margin-top: 10px !important;
+
+    color: #7c8f98 !important;
+
+    font-size: 14px !important;
+}
+
+/* =========================================================
+   FRALDAS + MIMO — JOÃO LUCCA
+   BLOCO LIMPO
+   ========================================================= */
+
+
+/* =========================================================
+   TÍTULOS
+   ========================================================= */
+
+.diapers-area h3,
+.mimo-area h3 {
+    margin: 0;
+    color: #304d5d;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 30px;
+    font-weight: 400;
+}
+
+
+/* =========================================================
+   ÁREA DAS FRALDAS
+   ========================================================= */
+
+.presents-section .diapers-area {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 1050px;
+    margin-left: auto;
+    margin-right: auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    text-align: center;
+}
+
+
+/* Pequenos detalhes dourados */
+
+.presents-section .diapers-area::before,
+.presents-section .diapers-area::after {
+    content: "✦";
+    position: absolute;
+    color: rgba(198, 162, 107, 0.28);
+    font-size: 14px;
+    pointer-events: none;
+}
+
+.presents-section .diapers-area::before {
+    left: 2%;
+    top: 25%;
+    animation: brilhoPremium 4s ease-in-out infinite alternate;
+}
+
+.presents-section .diapers-area::after {
+    right: 2%;
+    bottom: 20%;
+    font-size: 10px;
+    animation: brilhoPremium 5s ease-in-out infinite alternate-reverse;
+}
+
+
+@keyframes brilhoPremium {
+    from {
+        opacity: 0.25;
+        transform: translateY(0) scale(0.9);
+    }
+
+    to {
+        opacity: 0.75;
+        transform: translateY(-7px) scale(1.05);
+    }
+}
+
+
+/* =========================================================
+   LABEL "FRALDAS"
+   ========================================================= */
+
+.presents-section .diapers-area .section-mini-label {
+    display: block;
+    width: 100%;
+    margin-bottom: 8px;
+
+    color: #ad8651;
+    font-size: 10px;
+    letter-spacing: 3px;
+    text-align: center;
+}
+
+
+/* =========================================================
+   TÍTULO DAS FRALDAS
+   ========================================================= */
+
+.presents-section .diapers-area h3 {
+    display: block;
+    width: 100%;
+
+    color: #304f60;
+    font-size: 31px;
+    text-align: center;
+
+    text-shadow:
+        0 2px 12px rgba(73, 105, 119, 0.08);
+}
+
+
+/* =========================================================
+   TEXTO INTRODUTÓRIO
+   ========================================================= */
+
+.presents-section .diapers-intro {
+    display: block;
+    width: 100%;
+    max-width: 600px;
+
+    margin: 12px auto 32px;
+
+    color: #71858f;
+    font-size: 14px;
+    line-height: 1.7;
+
+    text-align: center;
+}
+
+
+/* =========================================================
+   GRID DAS FRALDAS
+   ========================================================= */
+
+.presents-section .diapers-grid {
+    display: grid;
+
+    width: 100%;
+    max-width: 1050px;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    grid-template-columns:
+        repeat(4, minmax(0, 1fr));
+
+    gap: 20px;
+
+    align-items: stretch;
+}
+
+
+/* =========================================================
+   CARD DA FRALDA
+   ========================================================= */
+
+.presents-section .diaper-option {
+    position: relative;
+
+    width: 100%;
+    min-width: 0;
+    min-height: 280px;
+
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+
+    margin: 0;
+    padding: 28px 20px 25px;
+
+    border: 1px solid rgba(198, 162, 107, 0.32);
+    border-radius: 8px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255, 255, 255, 0.98),
+            rgba(250, 252, 253, 0.94) 55%,
+            rgba(237, 246, 250, 0.96)
+        );
+
+    box-shadow:
+        0 10px 30px rgba(63, 94, 109, 0.07),
+        0 2px 5px rgba(63, 94, 109, 0.04);
+
+    overflow: hidden;
+
+    cursor: pointer;
+
+    text-align: center;
+
+    transition:
+        transform 0.4s cubic-bezier(.2, .8, .2, 1),
+        box-shadow 0.4s ease,
+        border-color 0.4s ease;
+}
+
+
+/* Detalhe dourado no topo */
+
+.presents-section .diaper-option::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 50%;
+
+    width: 45px;
+    height: 2px;
+
+    transform: translateX(-50%);
+
+    background: #c6a26b;
+
+    opacity: 0.75;
+
+    transition:
+        width 0.4s ease,
+        opacity 0.4s ease;
+}
+
+
+/* Brilho interno */
+
+.presents-section .diaper-option::after {
+    content: "";
+
+    position: absolute;
+
+    width: 170px;
+    height: 170px;
+
+    top: -90px;
+    right: -90px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(255, 255, 255, 0.9),
+            transparent 70%
+        );
+
+    pointer-events: none;
+}
+
+
+/* Hover */
+
+.presents-section .diaper-option:hover {
+    transform: translateY(-9px);
+
+    border-color: rgba(198, 162, 107, 0.62);
+
+    box-shadow:
+        0 22px 50px rgba(63, 94, 109, 0.12),
+        0 5px 15px rgba(198, 162, 107, 0.08);
+}
+
+.presents-section .diaper-option:hover::before {
+    width: 75px;
+    opacity: 1;
+}
+
+
+/* =========================================================
+   NÚMERO DO CARD
+   ========================================================= */
+
+.presents-section .diaper-option-number {
+    position: absolute;
+
+    top: 16px;
+    left: 18px;
+
+    width: auto;
+
+    color: rgba(104, 126, 136, 0.5);
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 11px;
+    letter-spacing: 1.5px;
+
+    text-align: left;
+}
+
+
+/* =========================================================
+   CÍRCULO DO TAMANHO
+   ========================================================= */
+
+.presents-section .diaper-option-size {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    width: 92px;
+    height: 92px;
+
+    margin: 20px auto;
+
+    border: 1px solid rgba(198, 162, 107, 0.42);
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle at 35% 30%,
+            #ffffff 0%,
+            #f7fbfd 42%,
+            #e8f3f7 100%
+        );
+
+    box-shadow:
+        inset 0 1px 2px rgba(255, 255, 255, 0.95),
+        0 7px 18px rgba(70, 101, 115, 0.08);
+
+    color: #355463;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 34px;
+    font-weight: 400;
+
+    text-align: center;
+
+    transition:
+        transform 0.4s ease,
+        box-shadow 0.4s ease;
+}
+
+.presents-section .diaper-option:hover .diaper-option-size {
+    transform: scale(1.05);
+
+    box-shadow:
+        inset 0 1px 2px rgba(255, 255, 255, 0.95),
+        0 10px 25px rgba(70, 101, 115, 0.12);
+}
+
+
+/* =========================================================
+   NOME DO TAMANHO
+   ========================================================= */
+
+.presents-section .diaper-option-title {
+    display: block;
+
+    width: 100%;
+
+    color: #3d5967;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 18px;
+    font-weight: 400;
+
+    letter-spacing: 0.2px;
+
+    text-align: center;
+}
+
+
+/* =========================================================
+   AÇÃO "ESCOLHER"
+   ========================================================= */
+
+.presents-section .diaper-option-action {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+
+    margin-top: auto;
+    padding-top: 22px;
+
+    color: #a77d46;
+
+    font-size: 12px;
+    letter-spacing: 0.7px;
+
+    text-align: center;
+
+    transition:
+        color 0.3s ease,
+        gap 0.3s ease;
+}
+
+.presents-section .diaper-option-action span {
+    font-size: 16px;
+}
+
+.presents-section .diaper-option:hover .diaper-option-action {
+    color: #8f6939;
+    gap: 13px;
+}
+
+
+/* =========================================================
+   CARD SELECIONADO
+   ========================================================= */
+
+.presents-section .diaper-option.selected {
+    border-color: rgba(198, 162, 107, 0.85);
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255, 255, 255, 1),
+            rgba(244, 249, 252, 0.98)
+        );
+
+    box-shadow:
+        0 18px 42px rgba(63, 94, 109, 0.13),
+        0 0 0 2px rgba(198, 162, 107, 0.10);
+}
+
+.presents-section .diaper-option.selected::before {
+    width: 75px;
+    opacity: 1;
+}
+
+.presents-section .diaper-option.selected .diaper-option-size {
+    border-color: rgba(198, 162, 107, 0.65);
+
+    box-shadow:
+        inset 0 1px 2px rgba(255, 255, 255, 0.95),
+        0 10px 25px rgba(198, 162, 107, 0.12);
+}
+
+.presents-section .diaper-option.selected .diaper-option-action {
+    color: #8f6939;
+}
+
+
+/* =========================================================
+   MENSAGEM DA FRALDA ESCOLHIDA
+   ========================================================= */
+
+.presents-section .diaper-selected-message {
+    display: block;
+
+    width: 100%;
+    max-width: 500px;
+
+    margin: 25px auto 0;
+    padding: 12px 18px;
+
+    box-sizing: border-box;
+
+    border: 1px solid rgba(198, 162, 107, 0.18);
+    border-radius: 6px;
+
+    background: rgba(255, 255, 255, 0.55);
+
+    color: #8999a1;
+
+    font-size: 13px;
+    line-height: 1.6;
+
+    text-align: center;
+
+    transition:
+        color 0.3s ease,
+        border-color 0.3s ease,
+        background 0.3s ease;
+}
+
+.presents-section .diaper-selected-message.active {
+    border-color: rgba(198, 162, 107, 0.35);
+
+    background: rgba(255, 255, 255, 0.78);
+
+    color: #9e7644;
+}
+
+
+/* =========================================================
+   ESTADO INDISPONÍVEL
+   ========================================================= */
+
+.presents-section .diaper-option.is-unavailable {
+    cursor: not-allowed;
+
+    border-color: rgba(150, 165, 171, 0.3);
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(242, 246, 248, 0.9),
+            rgba(231, 238, 241, 0.9)
+        );
+
+    opacity: 0.62;
+
+    box-shadow: none;
+}
+
+.presents-section .diaper-option.is-unavailable:hover {
+    transform: none;
+
+    border-color: rgba(150, 165, 171, 0.3);
+
+    box-shadow: none;
+}
+
+.presents-section .diaper-option.is-unavailable::before {
+    width: 55px;
+
+    background: #9baab0;
+}
+
+.presents-section .diaper-option.is-unavailable .diaper-option-size {
+    box-shadow: none;
+
+    background: #edf3f5;
+
+    color: #7f9199;
+}
+
+.presents-section .diaper-option.is-unavailable .diaper-option-action {
+    color: #89989f;
+
+    font-size: 0;
+}
+
+.presents-section .diaper-option.is-unavailable .diaper-option-action::before {
+    content: "Indisponível";
+
+    font-size: 12px;
+}
+
+.presents-section .diaper-option.is-unavailable .diaper-option-action span {
+    display: none;
+}
+
+
+/* =========================================================
+   DIVISOR ENTRE FRALDAS E MIMO
+   ========================================================= */
+
+.presents-section .presents-divider {
+    position: relative;
+    z-index: 2;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    max-width: 650px;
+
+    margin: 100px auto 85px;
+
+    gap: 18px;
+}
+
+.presents-section .presents-divider span {
+    display: block;
+
+    flex: 1;
+
+    height: 1px;
+
+    background:
+        linear-gradient(
+            to right,
+            transparent,
+            rgba(198, 162, 107, 0.35)
+        );
+}
+
+.presents-section .presents-divider span:last-child {
+    background:
+        linear-gradient(
+            to left,
+            transparent,
+            rgba(198, 162, 107, 0.35)
+        );
+}
+
+.presents-section .presents-divider b {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex: 0 0 auto;
+
+    width: 38px;
+    height: 38px;
+
+    border: 1px solid rgba(198, 162, 107, 0.35);
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.55);
+
+    color: #c19b62;
+
+    font-size: 18px;
+    font-weight: 400;
+
+    box-shadow:
+        0 5px 18px rgba(63, 94, 109, 0.05);
+}
+
+
+/* =========================================================
+   MIMO
+   ========================================================= */
+
+.presents-section .mimo-area {
+    position: relative;
+    z-index: 2;
+
+    width: 100%;
+    max-width: 760px;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    padding: 55px 45px 50px;
+
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    text-align: center;
+
+    border: 1px solid rgba(198, 162, 107, 0.25);
+    border-radius: 10px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255, 255, 255, 0.78),
+            rgba(244, 249, 252, 0.68)
+        );
+
+    box-shadow:
+        0 18px 45px rgba(63, 94, 109, 0.07);
+
+    backdrop-filter: blur(4px);
+}
+
+
+/* Pequeno detalhe superior */
+
+.presents-section .mimo-area::before {
+    content: "✦";
+
+    position: absolute;
+
+    top: 18px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    color: rgba(198, 162, 107, 0.65);
+
+    font-size: 12px;
+}
+
+
+/* Label */
+
+.presents-section .mimo-area .section-mini-label {
+    display: block;
+
+    width: 100%;
+
+    margin-bottom: 8px;
+
+    color: #ad8651;
+
+    font-size: 10px;
+    letter-spacing: 3px;
+
+    text-align: center;
+}
+
+
+/* Título */
+
+.presents-section .mimo-area h3 {
+    width: 100%;
+
+    margin: 0;
+
+    color: #304f60;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 32px;
+    font-weight: 400;
+
+    text-align: center;
+}
+
+
+/* Linha */
+
+.presents-section .mimo-line {
+    width: 45px;
+    height: 1px;
+
+    margin: 20px auto;
+
+    background:
+        linear-gradient(
+            to right,
+            transparent,
+            #c6a26b,
+            transparent
+        );
+}
+
+
+/* Texto */
+
+.presents-section .mimo-intro {
+    width: 100%;
+    max-width: 570px;
+
+    margin: 0 auto 35px;
+
+    color: #637985;
+
+    font-size: 15px;
+    line-height: 1.9;
+
+    text-align: center;
+}
+
+
+/* =========================================================
+   SUGESTÕES DE MIMO
+   ========================================================= */
+
+.presents-section .mimo-suggestions {
+    display: grid;
+
+    width: 100%;
+    max-width: 650px;
+
+    margin: 0 auto;
+
+    grid-template-columns:
+        repeat(4, minmax(0, 1fr));
+
+    gap: 12px;
+}
+
+
+/* Card de sugestão */
+
+.presents-section .mimo-suggestion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 105px;
+
+    padding: 18px 10px;
+
+    box-sizing: border-box;
+
+    border: 1px solid rgba(198, 162, 107, 0.18);
+    border-radius: 7px;
+
+    background: rgba(255, 255, 255, 0.58);
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+/* Ícone */
+
+.presents-section .mimo-suggestion span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 38px;
+    height: 38px;
+
+    margin-bottom: 10px;
+
+    border: 1px solid rgba(198, 162, 107, 0.25);
+    border-radius: 50%;
+
+    color: #bd9660;
+
+    background: rgba(255, 255, 255, 0.7);
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 16px;
+}
+
+
+/* Nome */
+
+.presents-section .mimo-suggestion strong {
+    color: #506875;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 14px;
+    font-weight: 400;
+
+    text-align: center;
+}
+
+
+/* Hover */
+
+.presents-section .mimo-suggestion:hover {
+    transform: translateY(-4px);
+
+    border-color: rgba(198, 162, 107, 0.38);
+
+    box-shadow:
+        0 8px 22px rgba(63, 94, 109, 0.06);
+}
+
+
+/* =========================================================
+   RODAPÉ DA SEÇÃO DE PRESENTES
+   ========================================================= */
+
+.presents-section .presents-footer {
+    position: relative;
+    z-index: 2;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    max-width: 700px;
+
+    margin: 85px auto 0;
+
+    gap: 20px;
+
+    text-align: center;
+}
+
+.presents-section .presents-footer span {
+    display: block;
+    flex: 1;
+    min-width: 30px;
+    height: 1px;
+
+    background: linear-gradient(
+        to right,
+        transparent,
+        rgba(198, 162, 107, 0.3)
+    );
+}
+
+.presents-section .presents-footer span:last-child {
+    background: linear-gradient(
+        to left,
+        transparent,
+        rgba(198, 162, 107, 0.3)
+    );
+}
+
+.presents-section .presents-footer p {
+    flex: 0 1 auto;
+
+    margin: 0 auto;
+
+    color: #82939b;
+
+    font-size: 12px;
+    line-height: 1.6;
+    letter-spacing: 0.2px;
+
+    text-align: center;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 850px) {
+
+    .presents-section .diapers-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        max-width: 650px;
+    }
+
+    .presents-section .mimo-suggestions {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        max-width: 500px;
+    }
+
+}
+
+
+/* =========================================================
+   CELULAR
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    .presents-section .diapers-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        width: 100%;
+        gap: 12px;
+    }
+
+    .presents-section .diaper-option {
+        min-height: 250px;
+
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+    .presents-section .diaper-option-size {
+        width: 78px;
+        height: 78px;
+
+        font-size: 30px;
+    }
+
+    .presents-section .diaper-option-title {
+        font-size: 16px;
+    }
+
+    .presents-section .diaper-option-action {
+        font-size: 11px;
+    }
+
+    .presents-section .presents-divider {
+        margin-top: 65px;
+        margin-bottom: 55px;
+
+        gap: 12px;
+    }
+
+    .presents-section .mimo-area {
+        padding: 50px 20px 40px;
+    }
+
+    .presents-section .mimo-area h3 {
+        font-size: 28px;
+    }
+
+    .presents-section .mimo-intro {
+        font-size: 14px;
+    }
+
+    .presents-section .mimo-suggestions {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        gap: 10px;
+    }
+
+    .presents-section .mimo-suggestion {
+        min-height: 100px;
+    }
+
+    .presents-section .presents-footer {
+        gap: 12px;
+        margin-top: 65px;
+    }
+
+    .presents-section .presents-footer p {
+        font-size: 11px;
+    }
+
+}
+
+
+/* =========================================================
+   FOOTER PRINCIPAL
+   ========================================================= */
+
+/* =========================================================
+   RODAPÉ PRINCIPAL — JOÃO LUCCA
+   ========================================================= */
+
+.site-footer {
+    position: relative;
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    padding: 80px 20px 75px;
+    box-sizing: border-box;
+
+    text-align: center;
+
+    background: var(--blue-dark);
+    color: white;
+
+    overflow: hidden;
+}
+
+.site-footer .footer-content {
+    position: relative;
+    z-index: 2;
+
+    width: 100%;
+    max-width: 650px;
+
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    text-align: center;
+}
+
+.site-footer .footer-mini-label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: var(--gold);
+
+    font-size: 10px;
+    font-weight: 500;
+
+    letter-spacing: 3px;
+}
+
+.site-footer h2 {
+    margin: 0;
+
+    font-family: "Italianno", cursive;
+
+    font-size: 60px;
+    font-weight: 400;
+
+    color: #ffffff;
+}
+
+.site-footer .footer-line {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 150px;
+
+    margin: 18px auto 18px;
+
+    gap: 12px;
+}
+
+.site-footer .footer-line span {
+    display: block;
+
+    width: 45px;
+    height: 1px;
+
+    background: rgba(198, 162, 107, 0.55);
+}
+
+.site-footer .footer-line b {
+    color: var(--gold);
+
+    font-size: 17px;
+    font-weight: 400;
+}
+
+.site-footer p {
+    max-width: 420px;
+
+    margin: 0 auto 22px;
+
+    color: rgba(255, 255, 255, 0.78);
+
+    font-size: 13px;
+    line-height: 1.7;
+
+    text-align: center;
+}
+
+.site-footer .footer-heart {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 38px;
+    height: 38px;
+
+    border: 1px solid rgba(198, 162, 107, 0.35);
+    border-radius: 50%;
+
+    color: var(--gold);
+
+    font-size: 18px;
+
+    background: rgba(255, 255, 255, 0.04);
+}
+
+/* NUVEM DO RODAPÉ */
+
+.site-footer .footer-cloud {
+    position: absolute;
+
+    color: rgba(255, 255, 255, 0.08);
+
+    font-size: 90px;
+
+    pointer-events: none;
+}
+
+.site-footer .footer-cloud-right {
+    right: -20px;
+    bottom: -25px;
+}
+
+
+/* =========================================================
+   RESPONSIVO
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    nav {
+        gap: 15px;
+    }
+
+    .teddy {
+        left: -35px;
+        transform: scale(0.7);
+    }
+
+    .stork {
+        right: -50px;
+        transform: scale(0.7);
+    }
+
+    .gift-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .header {
+        height: 70px;
+        padding: 0 20px;
+    }
+
+    .brand span {
+        font-size: 16px;
+        letter-spacing: 2px;
+    }
+
+    nav {
+        display: none;
+    }
+
+    .hero::before {
+        inset: 15px;
+    }
+
+    .hero-content {
+        padding: 100px 25px 70px;
+    }
+
+    .hero h1 {
+        font-size: 90px;
+    }
+
+    .hero h2 {
+        font-size: 15px;
+        letter-spacing: 5px;
+    }
+
+    .hero-description {
+        font-size: 17px;
+    }
+
+    .teddy {
+        left: -55px;
+        bottom: 2%;
+        transform: scale(0.55);
+    }
+
+    .stork {
+        right: -70px;
+        top: 17%;
+        transform: scale(0.5);
+    }
+
+    .balloons {
+        left: -25px;
+        top: 18%;
+        transform: scale(0.6);
+    }
+
+    .gift-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .invitation-section,
+    .gifts-section,
+    .presence-section {
+        padding: 80px 20px;
+    }
+
+    .section-title h2 {
+        font-size: 38px;
+    }
+
+    .presence-box {
+        padding: 35px 22px;
+    }
+
+    .diaper-section {
+        padding: 35px 15px;
+    }
+
+    .diaper-options span {
+        width: 48px;
+        height: 48px;
+    }
+
+}
+
+
+/* =========================================================
+   CENTRALIZAÇÃO DA SEÇÃO DE PRESENTES
+   ========================================================= */
+
+.presents-section {
+    position: relative;
+
+    width: 100%;
+
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+
+    text-align: center;
+
+    overflow: hidden;
+}
+
+
+/* Elementos principais */
+
+.presents-section .presents-decoration,
+.presents-section .presents-header,
+.presents-section .diapers-area,
+.presents-section .presents-divider,
+.presents-section .mimo-area,
+.presents-section .presents-footer {
+    position: relative;
+
+    z-index: 2;
+
+    width: 100%;
+
+    box-sizing: border-box;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    text-align: center;
+}
+
+
+/* =========================================================
+   DECORAÇÃO
+   ========================================================= */
+
+.presents-section .presents-decoration {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+
+    gap: 18px;
+}
+
+.presents-section .presents-decoration span {
+    display: block;
+
+    width: 70px;
+    height: 1px;
+
+    flex: 0 0 70px;
+}
+
+
+/* =========================================================
+   CABEÇALHO
+   ========================================================= */
+
+.presents-section .presents-header {
+    max-width: 700px;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+}
+
+.presents-section .presents-label {
+    display: block;
+
+    width: 100%;
+
+    text-align: center;
+}
+
+.presents-section .presents-header h2 {
+    display: block;
+
+    width: 100%;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    text-align: center;
+}
+
+.presents-section .presents-line {
+    display: block;
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.presents-section .presents-header p {
+    display: block;
+
+    width: 100%;
+    max-width: 610px;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    text-align: center;
+}
+
+
+/* =========================================================
+   ÁREA DAS FRALDAS
+   ========================================================= */
+
+.presents-section .diapers-area {
+    max-width: 1050px;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+}
+
+.presents-section .section-mini-label {
+    display: block;
+
+    width: 100%;
+
+    text-align: center;
+}
+
+.presents-section .diapers-area h3 {
+    display: block;
+
+    width: 100%;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    text-align: center;
+}
+
+.presents-section .diapers-intro {
+    display: block;
+
+    width: 100%;
+    max-width: 600px;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    text-align: center;
+}
+
+
+/* =========================================================
+   GRID
+   ========================================================= */
+
+.presents-section .diapers-grid {
+    display: grid;
+
+    width: 100%;
+    max-width: 1050px;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    grid-template-columns:
+        repeat(4, minmax(0, 1fr));
+
+    justify-content: center;
+    align-items: stretch;
+
+    text-align: center;
+}
+
+
+/* =========================================================
+   CARDS
+   ========================================================= */
+
+.presents-section .diaper-option {
+    position: relative;
+
+    width: 100%;
+    min-width: 0;
+
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: flex-start;
+
+    text-align: center;
+
+    margin: 0;
+
+    padding: 28px 20px 25px;
+}
+
+.presents-section .diaper-option-number {
+    position: absolute;
+
+    top: 16px;
+    left: 18px;
+
+    width: auto;
+
+    text-align: left;
+}
+
+.presents-section .diaper-option-size {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    flex-shrink: 0;
+
+    text-align: center;
+}
+
+.presents-section .diaper-option-title {
+    display: block;
+
+    width: 100%;
+
+    text-align: center;
+}
+
+.presents-section .diaper-option-action {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    text-align: center;
+}
+
+
+/* =========================================================
+   DIVISOR
+   ========================================================= */
+
+.presents-section .presents-divider {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    max-width: 650px;
+
+    gap: 18px;
+}
+
+.presents-section .presents-divider span {
+    display: block;
+
+    flex: 1;
+
+    height: 1px;
+}
+
+.presents-section .presents-divider b {
+    flex: 0 0 auto;
+
+    text-align: center;
+}
+
+
+/* =========================================================
+   MIMO
+   ========================================================= */
+
+.presents-section .mimo-area {
+    max-width: 650px;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+
+    text-align: center;
+}
+
+.presents-section .mimo-area .section-mini-label {
+    width: 100%;
+
+    text-align: center;
+}
+
+.presents-section .mimo-area h3 {
+    width: 100%;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    text-align: center;
+}
+
+.presents-section .mimo-line {
+    display: block;
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.presents-section .mimo-area p {
+    width: 100%;
+    max-width: 570px;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    text-align: center;
+}
+
+.presents-section .mimo-button {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    text-align: center;
+}
+
+
+/* =========================================================
+   RODAPÉ DA SEÇÃO DE PRESENTES
+   ========================================================= */
+
+.presents-section .presents-footer {
+    max-width: 700px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 20px;
+
+    text-align: center;
+}
+
+.presents-section .presents-footer span {
+    display: block;
+
+    flex: 1;
+
+    min-width: 30px;
+
+    height: 1px;
+}
+
+.presents-section .presents-footer p {
+    flex: 0 1 auto;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    text-align: center;
+}
+
+
+/* =========================================================
+   CELULAR
+   ========================================================= */
+
+@media (max-width: 850px) {
+
+    .presents-section .diapers-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        max-width: 650px;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .presents-section .diapers-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        width: 100%;
+    }
+
+    .presents-section .diaper-option {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+    .presents-section .presents-footer {
+        gap: 12px;
+    }
+
+}
+
+
+/* =========================================================
+   ACABAMENTO PREMIUM — PRESENTES JOÃO LUCCA
+   ========================================================= */
+
+
+/* Fundo */
+
+.presents-section {
+    background:
+        radial-gradient(
+            circle at 50% 8%,
+            rgba(255, 255, 255, 0.98) 0%,
+            rgba(247, 251, 253, 0.98) 30%,
+            rgba(235, 245, 249, 0.96) 65%,
+            #dcecf4 100%
+        );
+
+    box-shadow:
+        inset 0 25px 60px rgba(255, 255, 255, 0.45),
+        inset 0 -25px 60px rgba(113, 151, 168, 0.06);
+}
+
+
+/* Brilho suave */
+
+.presents-section {
+    isolation: isolate;
+}
+
+.presents-section::before {
+    content: "";
+
+    position: absolute;
+
+    width: 650px;
+    height: 260px;
+
+    top: -110px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    background:
+        radial-gradient(
+            ellipse at center,
+            rgba(255, 255, 255, 0.95) 0%,
+            rgba(255, 255, 255, 0.55) 38%,
+            transparent 72%
+        );
+
+    filter: blur(12px);
+
+    opacity: 0.95;
+
+    pointer-events: none;
+
+    z-index: 0;
+}
+
+
+/* Pequenos brilhos */
+
+.presents-section .diapers-area::before,
+.presents-section .diapers-area::after {
+    content: "✦";
+
+    position: absolute;
+
+    color: rgba(198, 162, 107, 0.28);
+
+    font-size: 14px;
+
+    pointer-events: none;
+}
+
+.presents-section .diapers-area::before {
+    left: 2%;
+    top: 25%;
+
+    animation:
+        brilhoPremium 4s ease-in-out infinite alternate;
+}
+
+.presents-section .diapers-area::after {
+    right: 2%;
+    bottom: 20%;
+
+    font-size: 10px;
+
+    animation:
+        brilhoPremium 5s ease-in-out infinite alternate-reverse;
+}
+
+@keyframes brilhoPremium {
+
+    from {
+        opacity: 0.25;
+
+        transform:
+            translateY(0)
+            scale(0.9);
+    }
+
+    to {
+        opacity: 0.75;
+
+        transform:
+            translateY(-7px)
+            scale(1.05);
+    }
+
+}
+
+
+/* Cabeçalho */
+
+.presents-section .presents-label {
+    color: #a9814d;
+
+    font-size: 10px;
+
+    letter-spacing: 3.5px;
+}
+
+.presents-section .presents-header h2 {
+    color: #294858;
+
+    letter-spacing: -0.5px;
+
+    text-shadow:
+        0 2px 12px rgba(73, 105, 119, 0.08);
+}
+
+.presents-section .presents-line {
+    width: 65px;
+
+    background:
+        linear-gradient(
+            to right,
+            transparent,
+            #c6a26b,
+            transparent
+        );
+}
+
+
+/* Área "FRALDAS" */
+
+.presents-section .section-mini-label {
+    color: #ad8651;
+
+    letter-spacing: 3px;
+}
+
+.presents-section .diapers-area h3 {
+    color: #304f60;
+
+    font-size: 31px;
+}
+
+
+/* Cards */
+
+.presents-section .diapers-grid {
+    gap: 20px;
+}
+
+.presents-section .diaper-option {
+    min-height: 280px;
+
+    border:
+        1px solid rgba(198, 162, 107, 0.32);
+
+    border-radius: 8px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255, 255, 255, 0.98),
+            rgba(250, 252, 253, 0.94) 55%,
+            rgba(237, 246, 250, 0.96)
+        );
+
+    box-shadow:
+        0 10px 30px rgba(63, 94, 109, 0.07),
+        0 2px 5px rgba(63, 94, 109, 0.04);
+
+    overflow: hidden;
+
+    transition:
+        transform 0.4s cubic-bezier(.2, .8, .2, 1),
+        box-shadow 0.4s ease,
+        border-color 0.4s ease;
+}
+
+
+/* Detalhe dourado */
+
+.presents-section .diaper-option::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 50%;
+
+    width: 45px;
+    height: 2px;
+
+    transform:
+        translateX(-50%);
+
+    background: #c6a26b;
+
+    opacity: 0.75;
+
+    transition:
+        width 0.4s ease,
+        opacity 0.4s ease;
+}
+
+
+/* Brilho interno */
+
+.presents-section .diaper-option::after {
+    content: "";
+
+    position: absolute;
+
+    width: 170px;
+    height: 170px;
+
+    top: -90px;
+    right: -90px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(255, 255, 255, 0.9),
+            transparent 70%
+        );
+
+    pointer-events: none;
+}
+
+
+/* Hover */
+
+.presents-section .diaper-option:hover {
+    transform: translateY(-9px);
+
+    border-color:
+        rgba(198, 162, 107, 0.62);
+
+    box-shadow:
+        0 22px 50px rgba(63, 94, 109, 0.12),
+        0 5px 15px rgba(198, 162, 107, 0.08);
+}
+
+.presents-section .diaper-option:hover::before {
+    width: 75px;
+
+    opacity: 1;
+}
+
+
+/* Círculo dos tamanhos */
+
+.presents-section .diaper-option-size {
+    width: 92px;
+    height: 92px;
+
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+    border:
+        1px solid rgba(198, 162, 107, 0.42);
+
+    background:
+        radial-gradient(
+            circle at 35% 30%,
+            #ffffff 0%,
+            #f7fbfd 42%,
+            #e8f3f7 100%
+        );
+
+    box-shadow:
+        inset 0 1px 2px rgba(255, 255, 255, 0.95),
+        0 7px 18px rgba(70, 101, 115, 0.08);
+
+    color: #355463;
+
+    font-size: 34px;
+
+    transition:
+        transform 0.4s ease,
+        box-shadow 0.4s ease;
+}
+
+.presents-section .diaper-option:hover .diaper-option-size {
+    transform: scale(1.05);
+
+    box-shadow:
+        inset 0 1px 2px rgba(255, 255, 255, 0.95),
+        0 10px 25px rgba(70, 101, 115, 0.12);
+}
+
+
+/* Texto */
+
+.presents-section .diaper-option-title {
+    color: #3d5967;
+
+    font-size: 18px;
+
+    letter-spacing: 0.2px;
+}
+
+.presents-section .diaper-option-action {
+    color: #a77d46;
+
+    letter-spacing: 0.7px;
+
+    transition:
+        color 0.3s ease,
+        gap 0.3s ease;
+}
+
+.presents-section .diaper-option:hover .diaper-option-action {
+    color: #8f6939;
+}
+
+
+/* Números */
+
+.presents-section .diaper-option-number {
+    color:
+        rgba(104, 126, 136, 0.5);
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 11px;
+
+    letter-spacing: 1.5px;
+}
+
+
+/* Divisor */
+
+.presents-section .presents-divider {
+    margin-top: 100px;
+    margin-bottom: 85px;
+}
+
+.presents-section .presents-divider b {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 38px;
+    height: 38px;
+
+    border:
+        1px solid rgba(198, 162, 107, 0.35);
+
+    border-radius: 50%;
+
+    background:
+        rgba(255, 255, 255, 0.55);
+
+    color: #c19b62;
+
+    box-shadow:
+        0 5px 18px rgba(63, 94, 109, 0.05);
+}
+
+
+/* Mimo */
+
+.presents-section .mimo-area {
+    position: relative;
+
+    max-width: 700px;
+
+    padding: 55px 55px 50px;
+
+    border:
+        1px solid rgba(198, 162, 107, 0.25);
+
+    border-radius: 10px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255, 255, 255, 0.76),
+            rgba(244, 249, 252, 0.66)
+        );
+
+    box-shadow:
+        0 18px 45px rgba(63, 94, 109, 0.07);
+
+    backdrop-filter: blur(4px);
+}
+
+
+/* Detalhe dourado */
+
+.presents-section .mimo-area::before {
+    content: "✦";
+
+    position: absolute;
+
+    top: 19px;
+    left: 50%;
+
+    transform:
+        translateX(-50%);
+
+    color:
+        rgba(198, 162, 107, 0.65);
+
+    font-size: 12px;
+}
+
+
+/* Título */
+
+.presents-section .mimo-area h3 {
+    color: #304f60;
+
+    font-size: 32px;
+}
+
+
+/* Linha */
+
+.presents-section .mimo-line {
+    width: 45px;
+
+    background:
+        linear-gradient(
+            to right,
+            transparent,
+            #c6a26b,
+            transparent
+        );
+}
+
+
+/* Texto */
+
+.presents-section .mimo-area p {
+    color: #637985;
+
+    font-size: 15px;
+
+    line-height: 1.9;
+}
+
+
+/* Botão */
+
+.presents-section .mimo-button {
+    border:
+        1px solid rgba(198, 162, 107, 0.5);
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255, 255, 255, 0.8),
+            rgba(239, 247, 250, 0.85)
+        );
+
+    color: #9e7644;
+
+    box-shadow:
+        0 6px 18px rgba(63, 94, 109, 0.05);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.presents-section .mimo-button:hover {
+    transform: translateY(-3px);
+
+    border-color:
+        rgba(198, 162, 107, 0.8);
+
+    box-shadow:
+        0 10px 25px rgba(63, 94, 109, 0.09);
+}
+
+
+/* Rodapé */
+
+.presents-section .presents-footer {
+    margin-top: 85px;
+}
+
+.presents-section .presents-footer p {
+    color: #82939b;
+
+    font-size: 12px;
+
+    letter-spacing: 0.2px;
+}
+
+
+/* ---------------------------------------------------------
+   INDISPONÍVEL
+   --------------------------------------------------------- */
+
+.presents-section .diaper-option.is-unavailable {
+    border-color: rgba(150,165,171,0.3);
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(242,246,248,0.9),
+            rgba(231,238,241,0.9)
+        );
+
+    opacity: 0.62;
+}
+
+.presents-section .diaper-option.is-unavailable::before {
+    background: #9baab0;
+
+    width: 55px;
+}
+
+.presents-section .diaper-option.is-unavailable
+.diaper-option-size {
+    box-shadow: none;
+
+    background: #edf3f5;
+
+    color: #7f9199;
+}
+
+
+/* ---------------------------------------------------------
+   CELULAR
+   --------------------------------------------------------- */
+
+@media (max-width: 600px) {
+
+    .presents-section .mimo-area {
+        padding: 48px 25px 42px;
+    }
+
+    .presents-section .mimo-area h3 {
+        font-size: 28px;
+    }
+
+    .presents-section .diaper-option {
+        min-height: 250px;
+    }
+
+    .presents-section .diaper-option-size {
+        width: 78px;
+        height: 78px;
+
+        font-size: 30px;
+    }
+
+}
+
+
+/* =========================================================
+   MIMO ESPECIAL — APENAS SUGESTÕES
+   ========================================================= */
+
+.presents-section .mimo-area {
+    position: relative;
+
+    width: 100%;
+    max-width: 760px;
+
+    padding: 55px 45px 50px;
+
+    box-sizing: border-box;
+
+    text-align: center;
+
+    border: 1px solid rgba(198,162,107,0.25);
+    border-radius: 10px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,0.78),
+            rgba(244,249,252,0.68)
+        );
+
+    box-shadow:
+        0 18px 45px rgba(63,94,109,0.07);
+}
+
+
+/* pequeno detalhe superior */
+
+.presents-section .mimo-area::before {
+    content: "✦";
+
+    position: absolute;
+
+    top: 18px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    color: rgba(198,162,107,0.65);
+
+    font-size: 12px;
+}
+
+
+/* título */
+
+.presents-section .mimo-area h3 {
+    color: #304f60;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 32px;
+    font-weight: 400;
+
+    text-align: center;
+}
+
+
+/* linha */
+
+.presents-section .mimo-line {
+    width: 45px;
+    height: 1px;
+
+    margin: 20px auto;
+
+    background:
+        linear-gradient(
+            to right,
+            transparent,
+            #c6a26b,
+            transparent
+        );
+}
+
+
+/* texto */
+
+.presents-section .mimo-intro {
+    max-width: 570px;
+
+    margin: 0 auto 35px;
+
+    color: #637985;
+
+    font-size: 15px;
+
+    line-height: 1.9;
+
+    text-align: center;
+}
+
+
+/* =========================================================
+   SUGESTÕES
+   ========================================================= */
+
+.presents-section .mimo-suggestions {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 12px;
+
+    width: 100%;
+    max-width: 650px;
+
+    margin: 0 auto;
+}
+
+
+/* cada sugestão */
+
+.presents-section .mimo-suggestion {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    min-height: 105px;
+
+    padding: 18px 10px;
+
+    box-sizing: border-box;
+
+    border: 1px solid rgba(198,162,107,0.18);
+
+    border-radius: 7px;
+
+    background:
+        rgba(255,255,255,0.58);
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+/* ícone */
+
+.presents-section .mimo-suggestion span {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 38px;
+    height: 38px;
+
+    margin-bottom: 10px;
+
+    border: 1px solid rgba(198,162,107,0.25);
+
+    border-radius: 50%;
+
+    color: #bd9660;
+
+    background: rgba(255,255,255,0.7);
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 16px;
+}
+
+
+/* nome */
+
+.presents-section .mimo-suggestion strong {
+    color: #506875;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 14px;
+
+    font-weight: 400;
+
+    text-align: center;
+}
+
+
+/* efeito delicado */
+
+.presents-section .mimo-suggestion:hover {
+    transform: translateY(-4px);
+
+    border-color: rgba(198,162,107,0.38);
+
+    box-shadow:
+        0 8px 22px rgba(63,94,109,0.06);
+}
+
+
+/* =========================================================
+   CELULAR
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    .presents-section .mimo-area {
+        padding: 50px 20px 40px;
+    }
+
+    .presents-section .mimo-area h3 {
+        font-size: 28px;
+    }
+
+    .presents-section .mimo-suggestions {
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 10px;
+    }
+
+}
+
+/* =========================================================
+   CONFIRMAÇÃO DE PRESENÇA — RSVP
+   ========================================================= */
+
+.rsvp-section {
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 100px 25px 85px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 50% 15%,
+            rgba(255, 255, 255, 0.98) 0%,
+            rgba(239, 247, 251, 0.96) 48%,
+            #dcecf4 100%
+        );
+}
+
+.rsvp-section::before {
+    content: "";
+    position: absolute;
+    width: 520px;
+    height: 260px;
+    top: -100px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    background:
+        radial-gradient(
+            ellipse at center,
+            rgba(255, 255, 255, 0.9),
+            transparent 70%
+        );
+
+    filter: blur(8px);
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   DECORAÇÃO
+   ========================================================= */
+
+.rsvp-decoration {
+    position: relative;
+    z-index: 2;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.rsvp-decoration span {
+    width: 55px;
+    height: 1px;
+
+    background:
+        linear-gradient(
+            to right,
+            transparent,
+            rgba(198, 162, 107, 0.6)
+        );
+}
+
+.rsvp-decoration span:last-child {
+    background:
+        linear-gradient(
+            to left,
+            transparent,
+            rgba(198, 162, 107, 0.6)
+        );
+}
+
+.rsvp-decoration b {
+    color: #c6a26b;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+
+/* =========================================================
+   CABEÇALHO
+   ========================================================= */
+
+.rsvp-header {
+    position: relative;
+    z-index: 2;
+
+    width: 100%;
+    max-width: 700px;
+
+    text-align: center;
+}
+
+.rsvp-label {
+    display: block;
+    margin-bottom: 16px;
+
+    color: #b18b59;
+    font-size: 11px;
+    letter-spacing: 3px;
+    font-weight: 600;
+}
+
+.rsvp-header h2 {
+    margin: 0;
+
+    color: #304f60;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: clamp(34px, 5vw, 48px);
+    font-weight: 400;
+    line-height: 1.2;
+}
+
+.rsvp-line {
+    width: 55px;
+    height: 1px;
+    margin: 22px auto;
+
+    background:
+        linear-gradient(
+            to right,
+            transparent,
+            #c6a26b,
+            transparent
+        );
+}
+
+.rsvp-header p {
+    max-width: 590px;
+    margin: 0 auto;
+
+    color: #637985;
+    font-size: 15px;
+    line-height: 1.9;
+}
+
+.rsvp-header .rsvp-note {
+    margin-top: 8px;
+
+    color: #7b8c94;
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   CARD DO FORMULÁRIO
+   ========================================================= */
+
+.rsvp-card {
+    position: relative;
+    z-index: 2;
+
+    width: 100%;
+    max-width: 620px;
+
+    margin: 45px auto 0;
+    padding: 45px;
+
+    box-sizing: border-box;
+
+    border: 1px solid rgba(198, 162, 107, 0.25);
+    border-radius: 10px;
+
+    background: rgba(255, 255, 255, 0.72);
+
+    box-shadow:
+        0 22px 55px rgba(63, 94, 109, 0.10);
+
+    backdrop-filter: blur(8px);
+
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+
+/* =========================================================
+   CAMPOS
+   ========================================================= */
+
+.rsvp-field {
+    width: 100%;
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+.rsvp-field > label {
+    display: block;
+
+    width: 100%;
+    margin-bottom: 10px;
+
+    color: #4f6875;
+
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+
+    text-align: left;
+}
+
+
+/* =========================================================
+   CAMPO NOME
+   ========================================================= */
+
+.rsvp-field input[type="text"] {
+    display: block;
+
+    width: 100%;
+    height: 52px;
+
+    padding: 0 17px;
+
+    box-sizing: border-box;
+
+    border: 1px solid rgba(116, 145, 158, 0.25);
+    border-radius: 5px;
+
+    outline: none;
+
+    background: rgba(255, 255, 255, 0.82);
+
+    color: #405965;
+
+    font-family: inherit;
+    font-size: 14px;
+
+    transition:
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.rsvp-field input[type="text"]::placeholder {
+    color: #a2afb5;
+}
+
+.rsvp-field input[type="text"]:focus {
+    border-color: rgba(198, 162, 107, 0.65);
+
+    box-shadow:
+        0 0 0 3px rgba(198, 162, 107, 0.08);
+}
+
+
+/* =========================================================
+   OPÇÕES DE PRESENÇA
+   ========================================================= */
+
+.rsvp-options {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 10px;
+}
+
+.rsvp-option {
+    position: relative;
+
+    width: 100%;
+    min-height: 52px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 0 16px;
+
+    box-sizing: border-box;
+
+    border: 1px solid rgba(116, 145, 158, 0.20);
+    border-radius: 5px;
+
+    background: rgba(255, 255, 255, 0.58);
+
+    cursor: pointer;
+
+    transition:
+        border-color 0.3s ease,
+        background 0.3s ease,
+        transform 0.2s ease;
+}
+
+.rsvp-option:hover {
+    border-color: rgba(198, 162, 107, 0.45);
+
+    background: rgba(255, 255, 255, 0.85);
+
+    transform: translateY(-1px);
+}
+
+.rsvp-option input {
+    width: 16px;
+    height: 16px;
+
+    flex-shrink: 0;
+
+    accent-color: #c6a26b;
+}
+
+.rsvp-option span {
+    color: #526b77;
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   INFORMAÇÃO DA FRALDA
+   ========================================================= */
+
+.rsvp-diaper-info {
+    display: flex;
+    align-items: center;
+
+    gap: 14px;
+
+    width: 100%;
+
+    margin-top: 8px;
+    margin-bottom: 30px;
+
+    padding: 16px 18px;
+
+    box-sizing: border-box;
+
+    border: 1px solid rgba(198, 162, 107, 0.22);
+    border-radius: 10px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255, 255, 255, 0.86),
+            rgba(247, 251, 253, 0.92)
+        );
+
+    text-align: left;
+}
+
+.rsvp-diaper-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 38px;
+    height: 38px;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+    background: rgba(198, 162, 107, 0.10);
+
+    color: #c6a26b;
+
+    font-size: 18px;
+}
+
+.rsvp-diaper-label {
+    display: block;
+
+    margin-bottom: 3px;
+
+    color: #8999a1;
+
+    font-size: 11px;
+    letter-spacing: 0.5px;
+}
+
+.rsvp-diaper-info strong {
+    color: #405965;
+
+    font-size: 14px;
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   ERRO / VALIDAÇÃO
+   ========================================================= */
+
+.rsvp-error {
+    display: none;
+
+    width: 100%;
+
+    margin: 0 0 18px;
+    padding: 13px 16px;
+
+    box-sizing: border-box;
+
+    border: 1px solid rgba(198, 162, 107, 0.28);
+    border-radius: 5px;
+
+    background: rgba(255, 250, 242, 0.75);
+
+    color: #8a6d43;
+
+    font-size: 13px;
+    line-height: 1.6;
+
+    text-align: center;
+}
+
+.rsvp-error.active {
+    display: block;
+}
+
+
+/* =========================================================
+   BOTÃO DE CONFIRMAÇÃO
+   ========================================================= */
+
+   .rsvp-button {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    width: 100% !important;
+    max-width: 100% !important;
+
+    min-width: 0 !important;
+    min-height: 56px !important;
+
+    margin: 8px 0 0 0 !important;
+    padding: 0 20px !important;
+
+    box-sizing: border-box !important;
+
+    border: 1px solid rgba(198, 162, 107, 0.55);
+    border-radius: 5px;
+
+    background: linear-gradient(
+        135deg,
+        #385b6d,
+        #294a5b
+    );
+
+    color: #ffffff;
+
+    font-family: inherit;
+    font-size: 13px;
+    letter-spacing: 1px;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 10px 25px rgba(45, 75, 89, 0.16);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.rsvp-button span {
+    margin-left: 10px;
+    font-size: 16px;
+}
+
+.rsvp-button:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 14px 30px rgba(45, 75, 89, 0.22);
+}
+   
+
+.rsvp-button span {
+    margin-left: 10px;
+    font-size: 16px;
+}
+
+.rsvp-button:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 14px 30px rgba(45, 75, 89, 0.22);
+}
+
+/* =========================================================
+   RESPONSIVO DO FORMULÁRIO
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    .rsvp-card {
+        padding: 32px 22px;
+    }
+
+    .rsvp-field {
+        margin-bottom: 25px;
+    }
+
+    .rsvp-option {
+        min-height: 50px;
+        padding: 0 14px;
+    }
+
+}
+
+
+/* =========================================
+   ACOMPANHANTES — ESTILO PREMIUM
+========================================= */
+
+.rsvp-companions {
+    margin-top: 30px;
+    padding-top: 26px;
+    border-top: 1px solid rgba(95, 125, 150, 0.15);
+}
+
+.rsvp-companions > label {
+    display: block;
+    margin-bottom: 14px;
+    color: #34495e;
+    font-size: 0.95rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+
+/* =========================================
+   BOTÃO ADICIONAR
+========================================= */
+
+.companions-choice {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.companion-add-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    min-width: 220px;
+    padding: 12px 20px;
+
+    border: 1px solid rgba(82, 116, 143, 0.28);
+    border-radius: 30px;
+
+    background: rgba(255, 255, 255, 0.75);
+    color: #4c6982;
+
+    font-family: inherit;
+    font-size: 0.88rem;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    box-shadow: 0 5px 16px rgba(54, 82, 105, 0.06);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        background 0.25s ease,
+        border-color 0.25s ease;
+}
+
+.companion-add-button:hover {
+    background: #ffffff;
+    border-color: rgba(82, 116, 143, 0.42);
+
+    box-shadow:
+        0 8px 22px rgba(54, 82, 105, 0.10);
+
+    transform: translateY(-2px);
+}
+
+.companion-add-button:active {
+    transform: translateY(0);
+}
+
+
+/* =========================================
+   CONTAINER
+========================================= */
+
+.companions-container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+
+/* =========================================
+   CARTÃO DO ACOMPANHANTE
+========================================= */
+
+.companion-card {
+    position: relative;
+
+    padding: 22px;
+
+    border: 1px solid rgba(82, 116, 143, 0.16);
+    border-radius: 18px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255, 255, 255, 0.97),
+            rgba(241, 247, 251, 0.94)
+        );
+
+    box-shadow:
+        0 8px 25px rgba(55, 82, 105, 0.07);
+
+    animation: companionCardIn 0.35s ease both;
+}
+
+@keyframes companionCardIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* =========================================
+   CABEÇALHO DO CARTÃO
+========================================= */
+
+.companion-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 18px;
+}
+
+.companion-title {
+    color: #314b61;
+    font-size: 0.96rem;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+}
+
+
+/* =========================================
+   BOTÃO REMOVER
+========================================= */
+
+.remove-companion {
+    padding: 5px 8px;
+
+    border: none;
+    border-radius: 8px;
+
+    background: transparent;
+    color: #9a7478;
+
+    font-family: inherit;
+    font-size: 0.75rem;
+    font-weight: 500;
+
+    cursor: pointer;
+
+    transition:
+        color 0.2s ease,
+        background 0.2s ease;
+}
+
+.remove-companion:hover {
+    color: #7e555a;
+    background: rgba(154, 116, 120, 0.07);
+}
+
+
+/* =========================================
+   LABELS
+========================================= */
+
+.companion-card label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #596b7b;
+    font-size: 0.82rem;
+    font-weight: 600;
+}
+
+
+/* =========================================
+   SELECT
+========================================= */
+
+.companion-card select {
+    width: 100%;
+    box-sizing: border-box;
+
+    padding: 13px 15px;
+
+    border: 1px solid rgba(82, 116, 143, 0.20);
+    border-radius: 11px;
+
+    background: rgba(255, 255, 255, 0.90);
+    color: #34495e;
+
+    font-family: inherit;
+    font-size: 0.88rem;
+
+    outline: none;
+    cursor: pointer;
+
+    transition:
+        border-color 0.25s ease,
+        box-shadow 0.25s ease,
+        background 0.25s ease;
+}
+
+.companion-card select:hover {
+    background: #ffffff;
+}
+
+.companion-card select:focus {
+    border-color: rgba(82, 116, 143, 0.42);
+
+    box-shadow:
+        0 0 0 3px rgba(82, 116, 143, 0.08);
+}
+
+
+/* =========================================
+   ÁREA DA FRALDA DO ACOMPANHANTE
+========================================= */
+
+.companion-diaper {
+    margin-top: 18px;
+    padding-top: 18px;
+
+    border-top: 1px solid rgba(82, 116, 143, 0.12);
+
+    animation: diaperIn 0.3s ease both;
+}
+
+@keyframes diaperIn {
+    from {
+        opacity: 0;
+        transform: translateY(6px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* =========================================
+   AJUSTE DO CAMPO DE ACOMPANHANTE
+========================================= */
+
+.companion-card .companion-type {
+    margin-bottom: 2px;
+}
+
+/* =========================================
+   BOTÃO — ABRIR CONVITE
+========================================= */
+
+.hero-open {
+    position: absolute;
+
+    bottom: 55px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    z-index: 10;
+
+    display: flex;
+    justify-content: center;
+}
+
+.hero-open button {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 14px;
+
+    min-width: 190px;
+
+    padding: 14px 25px;
+
+    border: 1px solid rgba(197, 164, 101, 0.75);
+
+    border-radius: 30px;
+
+    background: rgba(255, 255, 255, 0.72);
+
+    color: var(--blue-dark);
+
+    font-family: inherit;
+
+    font-size: 9px;
+
+    font-weight: 600;
+
+    letter-spacing: 3px;
+
+    cursor: pointer;
+
+    backdrop-filter: blur(6px);
+
+    box-shadow:
+        0 8px 25px rgba(36, 95, 131, 0.08);
+
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.hero-open button span {
+    font-size: 17px;
+
+    line-height: 1;
+
+    color: var(--gold);
+
+    transition:
+        transform 0.3s ease;
+}
+
+.hero-open button:hover {
+    transform: translateY(-3px);
+
+    background: rgba(255, 255, 255, 0.95);
+
+    box-shadow:
+        0 12px 30px rgba(36, 95, 131, 0.13);
+}
+
+.hero-open button:hover span {
+    transform: translateX(4px);
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+    .hero-open {
+        bottom: 38px;
+    }
+
+    .hero-open button {
+        min-width: 175px;
+
+        padding: 13px 22px;
+
+        font-size: 8px;
+
+        letter-spacing: 2.5px;
+    }
+
+    .hero-open button span {
+        font-size: 16px;
+    }
+}
+
+.page-next-button,
+.page-back-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+
+    min-width: 190px;
+    padding: 14px 24px;
+
+    border: 1px solid rgba(197, 164, 101, 0.7);
+    border-radius: 30px;
+
+    background: rgba(255, 255, 255, 0.72);
+    color: var(--blue-dark);
+
+    font-family: inherit;
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 2.5px;
+
+    cursor: pointer;
+
+    backdrop-filter: blur(6px);
+
+    box-shadow:
+        0 8px 25px rgba(36, 95, 131, 0.08);
+
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.page-next-button span,
+.page-back-button span {
+    font-size: 17px;
+    line-height: 1;
+    color: var(--gold);
+
+    transition: transform 0.3s ease;
+}
+
+.page-next-button:hover,
+.page-back-button:hover {
+    transform: translateY(-3px);
+    background: rgba(255, 255, 255, 0.95);
+
+    box-shadow:
+        0 12px 30px rgba(36, 95, 131, 0.13);
+}
+
+.page-next-button:hover span {
+    transform: translateX(4px);
+}
+
+.page-back-button:hover span {
+    transform: translateX(-4px);
+}
+
+
+@media (max-width: 600px) {
+
+    .page-next-button,
+    .page-back-button {
+        min-width: 175px;
+        padding: 13px 22px;
+        font-size: 8px;
+        letter-spacing: 2px;
+    }
+
+    .page-next-button span,
+    .page-back-button span {
+        font-size: 16px;
+    }
+}
+
+.page-next-button,
+.page-back-button {
+    margin-top: 20px;
+}
+
+.page-back-button {
+    margin-right: 12px;
+}
+
+.page-next-button {
+    margin-left: 12px;
+}
+
+.page-next-button,
+.page-back-button {
+    vertical-align: middle;
+}
+
+.page-back-button + .page-next-button {
+    margin-left: 12px;
+}
+
+@media (max-width: 600px) {
+    .page-back-button + .page-next-button {
+        margin-left: 0;
+        margin-top: 12px;
+    }
+}
+
+
+
+.page-transition {
+    animation: pageFadeIn 0.65s ease both;
+}
+
+@keyframes pageFadeIn {
+    from {
+        opacity: 0.35;
+        transform: translateY(14px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.page-enter {
+    animation: pageEnter 0.7s ease;
+}
+
+@keyframes pageEnter {
+    from {
+        opacity: 0.45;
+        transform: translateY(12px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* =========================================
+   TRANSIÇÃO CAPA → CONVITE
+========================================= */
+
+.hero {
+    position: relative;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+
+    left: 0;
+    right: 0;
+    bottom: -1px;
+
+    height: 90px;
+
+    background: linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0),
+        rgba(250, 248, 243, 0.55),
+        rgba(250, 248, 243, 1)
+    );
+
+    pointer-events: none;
+    z-index: 2;
+}
+
+.family-message {
+    position: relative;
+}
+
+.convite-tela {
+    display: none;
+    width: 100%;
+    min-height: 100vh;
+}
+
+.convite-tela.tela-ativa {
+    display: block;
+}
+
+/* =========================================
+   NAVEGAÇÃO POR TELAS
+========================================= */
+
+.convite-tela:not(.tela-ativa) {
+    position: absolute;
+    left: -99999px;
+    top: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.convite-tela.tela-ativa {
+    position: relative;
+    left: auto;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.convite-tela {
+    box-sizing: border-box;
+}
+/* =========================================
+   SISTEMA DE TELAS — CONVITE
+========================================= */
+
+.convite-tela {
+    display: none !important;
+}
+
+.convite-tela.tela-ativa {
+    display: block !important;
+}
+
+/* A capa originalmente usa flex */
+.hero.convite-tela.tela-ativa {
+    display: flex !important;
+}
+
+.hero::after {
+    display: none !important;
+}
+
+/* =========================================
+   TRANSIÇÃO ENTRE AS TELAS
+========================================= */
+
+@keyframes entradaTela {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Animação das páginas internas */
+.family-message.tela-ativa,
+.presents-section.tela-ativa,
+.rsvp-section.tela-ativa,
+.site-footer.tela-ativa {
+    animation: entradaTela 0.65s cubic-bezier(.22, 1, .36, 1);
+}
+
+/* Na capa animamos apenas o conteúdo,
+   preservando a animação da imagem de fundo */
+.hero.tela-ativa .hero-content,
+.hero.tela-ativa .hero-open {
+    animation: entradaTela 0.7s cubic-bezier(.22, 1, .36, 1);
+}
+
+/* Centralizar o cabeçalho da tela de presença */
+.rsvp-section .section-header {
+    width: 100%;
+    max-width: 100%;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    text-align: center !important;
+}
+
+.rsvp-section .section-header h2,
+.rsvp-section .section-header p,
+.rsvp-section .section-header span {
+    text-align: center !important;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Centralização do cabeçalho da presença no desktop */
+@media (min-width: 769px) {
+    .rsvp-header {
+        width: 100%;
+        max-width: 700px;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        align-self: center !important;
+        transform: none !important;
+        left: auto !important;
+        right: auto !important;
+    }
+}
+
+/* =========================================
+   AJUSTE DA CAPA NO CELULAR
+========================================= */
+
+@media (max-width: 600px) {
+
+    .hero.convite-tela.tela-ativa {
+        min-height: calc(100dvh - 70px);
+        height: calc(100dvh - 70px);
+        margin-top: 70px;
+        overflow: hidden;
+
+        background-image:
+            linear-gradient(
+                rgba(255,255,255,.08),
+                rgba(255,255,255,.08)
+            ),
+            url("../img/hero-joao-lucca-mobile.png");
+
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+    }
+
+    .hero-open {
+        position: absolute;
+        bottom: 90px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 20;
+    }
+}
+
+/* =========================================
+   BOTÃO DO MENU MOBILE
+========================================= */
+
+.menu-mobile-btn {
+    display: none;
+}
+
+@media (max-width: 600px) {
+
+    .menu-mobile-btn {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 5px;
+
+        width: 38px;
+        height: 38px;
+
+        padding: 8px;
+        border: none;
+        background: transparent;
+        cursor: pointer;
+
+        position: relative;
+        z-index: 30;
+    }
+
+    .menu-mobile-btn span {
+        display: block;
+        width: 22px;
+        height: 1px;
+        background: var(--blue-dark);
+        border-radius: 2px;
+    }
+}
+
+/* =========================================
+   MENU MOBILE
+========================================= */
+
+.menu-mobile {
+    display: none;
+}
+
+@media (max-width: 600px) {
+
+    .menu-mobile {
+        position: absolute;
+        top: 70px;
+        left: 0;
+
+        width: 100%;
+        padding: 25px 20px 28px;
+
+        background: rgba(255, 255, 255, 0.97);
+        backdrop-filter: blur(12px);
+
+        border-top: 1px solid rgba(197, 164, 101, 0.18);
+        border-bottom: 1px solid rgba(197, 164, 101, 0.25);
+
+        box-shadow: 0 15px 35px rgba(36, 95, 131, 0.10);
+
+        flex-direction: column;
+        align-items: center;
+        gap: 22px;
+
+        z-index: 25;
+    }
+
+    .menu-mobile.ativo {
+        display: flex;
+    }
+
+    .menu-mobile a {
+        color: var(--blue-dark);
+        text-decoration: none;
+
+        font-size: 11px;
+        font-weight: 500;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+    }
+}
+
+@media (max-width: 600px) {
+    .family-message {
+        width: 100%;
+        padding-left: 20px;
+        padding-right: 20px;
+        box-sizing: border-box;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .gift-grid {
+        grid-template-columns: 1fr;
+        width: 100%;
+        max-width: 340px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .site-footer.convite-tela.tela-ativa {
+    min-height: calc(100dvh - 70px);
+    padding: 40px 25px;
+
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+}
+
+.site-footer .footer-content {
+    margin: 0 auto;
+}                                               
+}
+.presents-section .page-next-button {
+    margin-top: 20px !important;
+}
+
+.presents-section .page-back-button {
+    margin-top: 10px !important;
+
+
+}
+
+
+/* =========================================
+   MIMO SELECIONADO
+========================================= */
+
+.mimo-suggestion {
+    cursor: pointer;
+    font-family: inherit;
+}
+
+.mimo-suggestion.selected {
+    border-color: #c6a26b;
+    background: rgba(198, 162, 107, 0.10);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(36, 95, 131, 0.12);
+}
+
+.mimo-suggestion.selected strong {
+    color: #244f6b;
+}
+
+/* =========================================
+   CAMPO NOME DO ACOMPANHANTE
+========================================= */
+
+.companion-name {
+    width: 100%;
+    box-sizing: border-box;
+
+    padding: 14px 16px;
+    margin-bottom: 20px;
+
+    border: 1px solid rgba(82, 116, 143, 0.20);
+    border-radius: 12px;
+
+    background: rgba(255, 255, 255, 0.92);
+    color: #34495e;
+
+    font-family: inherit;
+    font-size: 0.95rem;
+
+    outline: none;
+
+    box-shadow:
+        0 5px 16px rgba(54, 82, 105, 0.05);
+
+    transition:
+        border-color 0.25s ease,
+        box-shadow 0.25s ease,
+        background 0.25s ease;
+}
+
+.companion-name::placeholder {
+    color: #9aa8b3;
+}
+
+.companion-name:hover {
+    background: #ffffff;
+}
+
+.companion-name:focus {
+    background: #ffffff;
+
+    border-color: rgba(82, 116, 143, 0.45);
+
+    box-shadow:
+        0 0 0 3px rgba(82, 116, 143, 0.08),
+        0 8px 20px rgba(54, 82, 105, 0.08);
+}
+
+
+/* =========================================
+   TELA FINAL — JOÃO LUCCA
+========================================= */
+
+#final {
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+    padding: 100px 24px 60px;
+    box-sizing: border-box;
+
+    text-align: center;
+}
+
+#final .footer-content {
+    width: 100%;
+    max-width: 650px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 22px;
+    margin: 0 auto;
+}
+
+#final .footer-content h2 {
+    margin: 0;
+    font-size: clamp(48px, 7vw, 78px);
+}
+
+#final .footer-content p {
+    max-width: 480px;
+    margin: 0 auto;
+
+    font-size: clamp(16px, 2vw, 19px);
+    line-height: 1.8;
+}
+
+#final .footer-mini-label {
+    letter-spacing: 4px;
+}
+
+#final .footer-line {
+    margin: 8px auto;
+}
+
+#final:not(.tela-ativa) {
+    display: none;
+}
+
+/* CENTRALIZAÇÃO DA TELA FINAL */
+#final.convite-tela.tela-ativa {
+    min-height: 100dvh;
+
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    padding: 82px 20px 30px;
+    box-sizing: border-box;
+}
+
+#final .footer-content {
+    position: relative;
+    width: 100%;
+    max-width: 650px;
+
+    margin: 0 auto;
+    transform: translateY(25px);
+
+    text-align: center;
+}
+
+/* =========================================
+   MENU HAMBÚRGUER — JOÃO LUCCA
+========================================= */
+
+/* Escondido no computador */
+.menu-toggle {
+    display: none;
+}
+
+/* Menu para celular */
+@media (max-width: 600px) {
+
+    .header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .menu-toggle {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+
+        width: 42px;
+        height: 42px;
+        padding: 0;
+
+        background: transparent;
+        border: 1px solid rgba(198, 162, 107, 0.35);
+        border-radius: 8px;
+
+        cursor: pointer;
+        z-index: 1002;
+    }
+
+    .menu-toggle span {
+        display: block;
+        width: 21px;
+        height: 2px;
+        background: #173f5a;
+        border-radius: 3px;
+        transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+
+    /* Menu fechado */
+    .header #menu-principal {
+        display: none;
+    }
+
+    /* Menu aberto */
+    .header #menu-principal.menu-aberto {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+
+        padding: 12px 20px 20px;
+
+        background: #faf8f3;
+        border-bottom: 1px solid rgba(198, 162, 107, 0.35);
+        box-shadow: 0 12px 25px rgba(23, 63, 90, 0.08);
+
+        z-index: 1001;
+    }
+
+    .header #menu-principal a {
+        display: block;
+        padding: 15px 8px;
+        color: #173f5a;
+        font-size: 13px;
+        letter-spacing: 1px;
+    }
+
+    /* Transformação das linhas em X */
+    .menu-toggle.ativo span:nth-child(1) {
+        transform: translateY(7px) rotate(45deg);
+    }
+
+    .menu-toggle.ativo span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-toggle.ativo span:nth-child(3) {
+        transform: translateY(-7px) rotate(-45deg);
+    }
+}
+
+.diaper-option.indisponivel,
+.diaper-option:disabled {
+    opacity: 0.35;
+    filter: grayscale(75%);
+    cursor: not-allowed;
+    pointer-events: none;
+    box-shadow: none;
+    transform: none;
+}

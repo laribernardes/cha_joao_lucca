@@ -1,0 +1,952 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>João Lucca | Chá de Bebê</title>
+
+    <!-- Fontes -->
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=DM+Sans:wght@300;400;500;600&family=Italianno&display=swap"
+          rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet"
+          href="{% static 'evento/css/style.css' %}">
+
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     CABEÇALHO
+========================= -->
+
+<header class="header">
+
+    
+    <a href="#inicio"
+   class="brand"
+   onclick="mostrarTela('inicio'); return false;">
+
+        <span>JOÃO LUCCA</span>
+
+        <small>CHÁ DE BEBÊ</small>                                                                                                                                                                                                                                                                                                                                                                 
+
+    </a>
+
+    <!-- BOTÃO DO MENU MOBILE -->
+    <button
+        type="button"
+        class="menu-toggle"
+        aria-label="Abrir menu"
+        aria-expanded="false"
+        aria-controls="menu-principal"
+    >
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+    <nav id="menu-principal">
+    <a href="#inicio" onclick="mostrarTela('inicio'); return false;">Início</a>
+
+    <a href="#convite" onclick="mostrarTela('convite'); return false;">O convite</a>
+
+    <a href="#presentes" onclick="mostrarTela('presentes'); return false;">Presentes</a>
+
+    <a href="#presenca" onclick="mostrarTela('presenca'); return false;">Presença</a>
+</nav>
+
+</header>
+
+
+
+<!-- =========================
+     PRIMEIRA TELA
+========================= -->
+
+<section class="hero convite-tela tela-ativa" id="inicio">
+
+    <div class="hero-content">
+
+        <div class="eyebrow">
+            NOSSO PEQUENO ESTÁ CHEGANDO
+        </div>
+
+        <div class="hero-ornament">
+            <span></span>
+            <b>♡</b>
+            <span></span>
+        </div>
+
+        <h1>
+            João Lucca
+        </h1>
+
+        <h2>
+            CHÁ DE BEBÊ
+        </h2>
+
+        <p class="hero-description">
+            Uma noite preparada com muito amor
+            para celebrar a chegada do nosso pequeno.
+        </p>
+
+        <div class="hero-date">
+
+            <strong>28</strong>
+
+            <div>
+                <span>NOVEMBRO</span>
+                <small>2026</small>
+            </div>
+
+        </div>
+
+
+    </div>
+
+    <div class="hero-open">
+        <button
+        type="button"
+        id="openInvitation"
+        onclick="mostrarTela('convite')"
+    >
+        ABRIR CONVITE
+        <span>→</span>
+    </button>
+    </div>
+
+</section>
+
+
+
+    <!-- Conteúdo central -->
+
+    
+
+
+
+<!-- =========================
+     CONVITE
+========================= -->
+
+
+
+<!-- =========================================
+     MENSAGEM PARA AMIGOS E FAMILIARES
+========================================= -->
+
+<section class="family-message convite-tela" id="convite">
+
+    <div class="family-message-decoration">
+
+        <span></span>
+
+        <b>✦</b>
+
+        <span></span>
+
+    </div>
+
+
+    <div class="family-message-content">
+
+        <span class="family-message-label">
+            UM MOMENTO ESPECIAL
+        </span>
+
+
+        <h2>
+            Para quem amamos
+        </h2>
+
+
+        <div class="family-message-line"></div>
+
+
+        <p class="family-message-intro">
+            A chegada de um bebê transforma tudo ao redor,
+            trazendo novos sonhos, novos sentimentos e
+            momentos que ficam para sempre no coração.
+        </p>
+
+
+        <p>
+            Queremos compartilhar esse momento tão especial
+            com as pessoas que fazem parte da nossa história.
+        </p>
+
+
+        <p>
+            <strong>João Lucca</strong> já é muito amado,
+            mesmo antes de chegar, e será uma alegria
+            celebrar sua chegada ao lado de nossa família
+            e de nossos amigos.
+        </p>
+
+
+        <p class="family-message-final">
+            Sua presença tornará esse dia ainda mais especial.
+        </p>
+
+    </div>
+
+
+    
+    <!-- INFORMAÇÕES DO EVENTO -->
+
+    <div class="family-event-info">
+
+        <div class="family-event-date">
+            <strong>28</strong>
+
+            <div>
+                <span>NOVEMBRO</span>
+                <small>2026</small>
+            </div>
+        </div>
+
+        <div class="family-event-time">
+            <span>HORÁRIO</span>
+            <strong>18h30</strong>
+        </div>
+
+        <div class="family-event-location">
+
+            <span class="family-event-location-icon">⌖</span>
+
+            <div>
+                <strong>
+                    A Igreja de Jesus Cristo dos Santos dos Últimos Dias
+                </strong>
+
+                <p>
+                    R. Bernardo Proença, 100 — Itamarati<br>
+                    Petrópolis — RJ
+                </p>
+            </div>
+
+        </div>
+
+        <a
+            href="https://www.google.com/maps/search/?api=1&query=A+Igreja+de+Jesus+Cristo+dos+Santos+dos+Ultimos+Dias%2C+R.+Bernardo+Proenca%2C+100%2C+Itamarati%2C+Petropolis+-+RJ%2C+25710-082"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="family-event-map-button"
+        >
+            COMO CHEGAR
+            <span>→</span>
+        </a>
+
+    </div>
+
+
+
+
+    <div class="family-message-bottom">
+
+        <span>Com carinho</span>
+
+        <b>João Lucca</b>
+
+    </div>
+
+    <button
+        type="button"
+        class="page-next-button"
+        onclick="mostrarTela('presentes')"
+    >
+        PRÓXIMA
+        <span>→</span>
+    </button>
+
+    <button
+        type="button"
+        class="page-back-button"
+        onclick="mostrarTela('inicio')"
+    >
+        <span>←</span>
+        VOLTAR
+    </button>
+
+</section>
+
+
+
+<section class="presents-section convite-tela" id="presentes">
+
+    <!-- DECORAÇÃO SUPERIOR -->
+    <div class="presents-decoration">
+        <span></span>
+        <b>✦</b>
+        <span></span>
+    </div>
+
+    <!-- CABEÇALHO -->
+    <div class="presents-header">
+
+        <span class="presents-label">
+            UM CARINHO ESPECIAL
+        </span>
+
+        <h2>
+            Um carinho para<br>
+            João Lucca
+        </h2>
+
+        <div class="presents-line"></div>
+
+        <p>
+            Para o nosso chá de bebê, você poderá escolher entre fralda, lenço umedecido ou Pomada
+            para poder presentear o pequeno João Lucca.
+        </p>
+
+        <p class="presents-note">
+            O tamanho da fralda escolhido e os outros presentes
+             poderá ser informado junto à confirmação de presença.
+        </p>
+
+    </div>
+
+
+    <!-- =====================================================
+     ITEM PRINCIPAL
+    ===================================================== -->
+
+    <div class="diapers-area">
+
+        <span class="section-mini-label">
+            PRESENTE PRINCIPAL
+        </span>
+
+        <h3>
+            Escolha o que deseja levar
+        </h3>
+
+        <p class="diapers-intro">
+            Escolha uma opção para presentear o João Lucca.
+            Pode ser uma fralda, lenço umedecido ou pomada.
+        </p>
+
+
+        
+        <div class="diapers-grid">
+
+            <!-- FRALDA RN -->
+            <button
+                type="button"
+                class="diaper-option{% if not disponibilidade.RN.disponivel %} indisponivel{% endif %}"
+                data-size="RN"
+                {% if not disponibilidade.RN.disponivel %}disabled{% endif %}
+            >
+                <span class="diaper-option-number">01</span>
+
+                <span class="diaper-option-size">
+                    RN
+                </span>
+
+                <span class="diaper-option-title">
+                    Fralda RN
+                </span>
+
+                <span class="diaper-option-action">
+                    Escolher
+                    <span>→</span>
+                </span>
+            </button>
+
+
+            <!-- FRALDA P -->
+            <button
+                type="button"
+                class="diaper-option{% if not disponibilidade.P.disponivel %} indisponivel{% endif %}"
+                data-size="P"
+                {% if not disponibilidade.P.disponivel %}disabled{% endif %}
+            >
+                <span class="diaper-option-number">02</span>
+
+                <span class="diaper-option-size">
+                    P
+                </span>
+
+                <span class="diaper-option-title">
+                    Fralda P
+                </span>
+
+                <span class="diaper-option-action">
+                    Escolher
+                    <span>→</span>
+                </span>
+            </button>
+
+
+            <!-- FRALDA M -->
+            <button
+                type="button"
+                class="diaper-option{% if not disponibilidade.M.disponivel %} indisponivel{% endif %}"
+                data-size="M"
+                {% if not disponibilidade.M.disponivel %}disabled{% endif %}
+            >
+                <span class="diaper-option-number">03</span>
+
+                <span class="diaper-option-size">
+                    M
+                </span>
+
+                <span class="diaper-option-title">
+                    Fralda M
+                </span>
+
+                <span class="diaper-option-action">
+                    Escolher
+                    <span>→</span>
+                </span>
+            </button>
+
+
+            <!-- FRALDA G -->
+            <button
+                type="button"
+                class="diaper-option{% if not disponibilidade.G.disponivel %} indisponivel{% endif %}"
+                data-size="G"
+                {% if not disponibilidade.G.disponivel %}disabled{% endif %}
+            >
+                <span class="diaper-option-number">04</span>
+
+                <span class="diaper-option-size">
+                    G
+                </span>
+
+                <span class="diaper-option-title">
+                    Fralda G
+                </span>
+
+                <span class="diaper-option-action">
+                    Escolher
+                    <span>→</span>
+                </span>
+            </button>
+
+
+            <!-- LENÇO UMEDECIDO -->
+            <button
+                type="button"
+                class="diaper-option{% if not disponibilidade.lenco.disponivel %} indisponivel{% endif %}"
+                data-size="lenco"
+                {% if not disponibilidade.lenco.disponivel %}disabled{% endif %}
+            >
+                <span class="diaper-option-number">05</span>
+
+                <span class="diaper-option-size">
+                    ♡
+                </span>
+
+                <span class="diaper-option-title">
+                    Lenço umedecido
+                </span>
+
+                <span class="diaper-option-action">
+                    Escolher
+                    <span>→</span>
+                </span>
+            </button>
+
+
+            <!-- POMADA -->
+            <button
+                type="button"
+                class="diaper-option{% if not disponibilidade.pomada.disponivel %} indisponivel{% endif %}"
+                data-size="pomada"
+                {% if not disponibilidade.pomada.disponivel %}disabled{% endif %}
+            >
+                <span class="diaper-option-number">06</span>
+
+                <span class="diaper-option-size">
+                    ✦
+                </span>
+
+                <span class="diaper-option-title">
+                    Pomada
+                </span>
+
+                <span class="diaper-option-action">
+                    Escolher
+                    <span>→</span>
+                </span>
+            </button>
+
+        </div>
+
+
+    </div>
+
+    <p class="diaper-selected-message" id="diaperSelectedMessage">
+        Escolha um presente principal para continuar.
+    </p>
+
+
+    <span class="section-mini-label">
+        UM DETALHE A MAIS
+    </span>
+
+    <h3>
+        Um mimo especial
+    </h3>
+
+    <div class="mimo-line"></div>
+
+    <p class="mimo-intro">
+        Além do presente principal, um mimo especial para o
+        João Lucca também pode fazer parte desse carinho.
+    </p>
+
+
+    <div class="mimo-suggestions">
+
+        <button
+            type="button"
+            class="mimo-suggestion"
+            data-mimo="macacao"
+        >
+            <span>♡</span>
+            <strong>Macacão</strong>
+        </button>
+
+        <button
+            type="button"
+            class="mimo-suggestion"
+            data-mimo="body"
+        >
+            <span>✦</span>
+            <strong>Body</strong>
+        </button>
+
+        <button
+            type="button"
+            class="mimo-suggestion"
+            data-mimo="mijao"
+        >
+            <span>♢</span>
+            <strong>Mijão</strong>
+        </button>
+
+        <button
+            type="button"
+            class="mimo-suggestion"
+            data-mimo="meia"
+        >
+            <span>♡</span>
+            <strong>Meia</strong>
+        </button>
+
+        <button
+            type="button"
+            class="mimo-suggestion"
+            data-mimo="luvinha"
+        >
+            <span>✦</span>
+            <strong>Luvinha</strong>
+        </button>
+
+        <button
+            type="button"
+            class="mimo-suggestion"
+            data-mimo="touca"
+        >
+            <span>♢</span>
+            <strong>Touca</strong>
+        </button>
+
+        <button
+            type="button"
+            class="mimo-suggestion"
+            data-mimo="manta"
+        >
+            <span>♡</span>
+            <strong>Manta</strong>
+        </button>
+
+        <button
+            type="button"
+            class="mimo-suggestion"
+            data-mimo="toalhinha_boca"
+        >
+            <span>✦</span>
+            <strong>Toalhinha de boca</strong>
+        </button>
+
+        <button
+            type="button"
+            class="mimo-suggestion"
+            data-mimo="toalha_banho"
+        >
+            <span>♢</span>
+            <strong>Toalha de banho</strong>
+        </button>
+
+        <button
+            type="button"
+            class="mimo-suggestion"
+            data-mimo="outros"
+        >
+            <span>♡</span>
+            <strong>Outros</strong>
+        </button>
+
+    </div>
+
+
+    <!-- RODAPÉ -->
+    <div class="presents-footer">
+
+        <span></span>
+
+        <p>
+            Cada gesto de carinho tornará esse momento
+            ainda mais especial. 🤍
+        </p>
+
+        <span></span>
+
+    </div>
+
+     <!-- DIVISOR -->
+    <div class="presents-divider">
+        <span></span>
+        <b>♡</b>
+        <span></span>
+    </div>
+
+    <button
+        type="button"
+        class="page-next-button"
+        onclick="mostrarTela('presenca')"
+    >
+        CONFIRMAR PRESENÇA
+        <span>→</span>
+    </button>
+
+    <button
+        type="button"
+        class="page-back-button"
+        onclick="mostrarTela('convite')"
+    >
+        <span>←</span>
+        VOLTAR
+    </button>
+
+    </section>
+<!-- =====================<div class="presents-divider">================================
+     CONFIRMAÇÃO DE PRESENÇA
+     ===================================================== -->
+
+<section class="rsvp-section convite-tela" id="presenca">
+
+    <div class="rsvp-decoration">
+        <span></span>
+        <b>✦</b>
+        <span></span>
+    </div>
+
+    <div class="rsvp-header">
+
+        <span class="rsvp-label">
+            UM DIA PARA CELEBRAR
+        </span>
+
+        <h2>
+            Confirme sua presença
+        </h2>
+
+        <div class="rsvp-line"></div>
+
+        <p>
+            Sua presença tornará a chegada do João Lucca
+            ainda mais especial.
+        </p>
+
+        <p class="rsvp-note">
+            Confirme sua presença para que possamos
+            preparar tudo com muito carinho.
+        </p>
+
+    </div>
+
+
+    <div class="rsvp-card">
+
+        <form id="rsvpForm" method="POST">
+
+            {% csrf_token %}
+
+            <input
+                type="hidden"
+                id="tamanho_fralda"
+                name="tamanho_fralda"
+                value=""
+            >
+
+            <input
+                type="hidden"
+                id="mimo"
+                name="mimo"
+                value=""
+            >
+
+
+            <div class="rsvp-field">
+
+                <label for="nome">
+                    Seu nome
+                </label>
+
+                <input
+                    type="text"
+                    id="nome"
+                    name="nome"
+                    placeholder="Digite seu nome"
+                    required
+                >
+
+            </div>
+
+
+            <div class="rsvp-field">
+
+                <label for="presenca">
+                    Você poderá estar conosco?
+                </label>
+
+                <div class="rsvp-options">
+
+                    <label class="rsvp-option">
+
+                        <input
+                            type="radio"
+                            name="presenca"
+                            value="sim"
+                            required
+                        >
+
+                        <span>
+                            Sim, estarei presente
+                        </span>
+
+                    </label>
+
+
+                    <label class="rsvp-option">
+
+                        <input
+                            type="radio"
+                            name="presenca"
+                            value="nao"
+                        >
+
+                        <span>
+                            Infelizmente, não poderei ir
+                        </span>
+
+                    </label>
+
+                </div>
+
+            </div>
+
+
+            <div
+                class="rsvp-diaper-info"
+                id="rsvpDiaperInfo"
+            >
+
+                <span class="rsvp-diaper-icon">
+                    ♡
+                </span>
+
+                <div>
+
+                    <span class="rsvp-diaper-label">
+                        Presente escolhido
+                    </span>
+
+                    <strong id="rsvpDiaperSize">
+                        Nenhum tamanho selecionado
+                    </strong>
+
+                </div>
+
+            </div>
+
+            <div
+                class="rsvp-diaper-info"
+                id="rsvpMimoInfo"
+            >
+                <span class="rsvp-diaper-icon">
+                    ✦
+                </span>
+
+                <div>
+                    <span class="rsvp-diaper-label">
+                        Mimo escolhido
+                    </span>
+
+                    <strong id="rsvpMimoSelected">
+                        Nenhum mimo selecionado
+                    </strong>
+                </div>
+            </div>
+
+
+            <div class="rsvp-companions">
+
+                <label>
+                    Vai levar algum acompanhante?
+                </label>
+
+                <div class="companions-choice">
+
+                    <button
+                        type="button"
+                        id="addCompanion"
+                        class="companion-add-button"
+                    >
+                        + Adicionar acompanhante
+                    </button>
+
+                </div>
+
+                <div
+                    id="companionsContainer"
+                    class="companions-container"
+                ></div>
+
+            </div>
+
+
+            <div class="rsvp-line"></div>
+
+
+            <p
+                class="rsvp-error"
+                id="rsvpError"
+                aria-live="polite"
+            ></p>
+
+
+            <button
+                type="submit"
+                class="rsvp-button"
+            >
+
+                <span>
+                    FINALIZAR
+                </span>
+
+                <span>
+                    →
+                </span>
+
+            </button>
+
+            <div class="rsvp-line"></div>
+
+
+            <span></span>
+
+            <p class="rsvp-final-message">
+                 Será uma alegria ter você conosco. 🤍
+            </p>
+
+            <span></span>
+
+
+        </form>
+
+
+        <button
+        type="button"
+        class="page-back-button"
+        onclick="mostrarTela('presentes')"
+    >
+        <span>←</span>
+        VOLTAR
+    </button>
+
+    </div>
+
+
+
+
+</section>
+
+
+
+<!-- =========================
+     FINAL
+========================= -->
+
+
+<footer class="site-footer convite-tela" id="final">
+
+    <div class="footer-cloud footer-cloud-right">
+        ☁
+    </div>
+
+    <div class="footer-content">
+
+        <span class="footer-mini-label">
+            COM CARINHO
+        </span>
+
+        <h2>
+            João Lucca
+        </h2>
+
+        <div class="footer-line">
+            <span></span>
+            <b>♡</b>
+            <span></span>
+        </div>
+
+        <p>
+            Obrigada por fazer parte
+            desse momento tão especial.
+        </p>
+
+        <span class="footer-heart">
+            ♡
+        </span>
+
+    </div>
+
+</footer>
+
+
+{% if sucesso %}
+<script>
+    window.abrirTelaFinal = true;
+</script>
+{% endif %}
+
+<script src="{% static 'evento/script.js' %}" defer></script>
+
+</body>
+
+</html>

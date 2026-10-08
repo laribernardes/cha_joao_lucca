@@ -1,0 +1,369 @@
+{% extends "admin/change_list.html" %}
+
+{% block content %}
+
+<!-- =====================================================
+     RESUMO DE CONVIDADOS
+===================================================== -->
+
+<div style="
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-bottom: 25px;
+">
+
+    <div style="
+        padding: 18px 25px;
+        border-radius: 10px;
+        background: var(--darkened-bg);
+        min-width: 160px;
+    ">
+        <div style="font-size: 13px;">
+            Adultos
+        </div>
+
+        <strong style="font-size: 26px;">
+            {{ total_adultos_evento }}
+        </strong>
+    </div>
+
+
+    <div style="
+        padding: 18px 25px;
+        border-radius: 10px;
+        background: var(--darkened-bg);
+        min-width: 160px;
+    ">
+        <div style="font-size: 13px;">
+            Crianças
+        </div>
+
+        <strong style="font-size: 26px;">
+            {{ total_criancas_evento }}
+        </strong>
+    </div>
+
+
+    <div style="
+        padding: 18px 25px;
+        border-radius: 10px;
+        background: var(--darkened-bg);
+        min-width: 160px;
+    ">
+        <div style="font-size: 13px;">
+            Total de pessoas
+        </div>
+
+        <strong style="font-size: 26px;">
+            {{ total_pessoas_evento }}
+        </strong>
+    </div>
+
+</div>
+
+
+<!-- =====================================================
+     PRESENTES PRINCIPAIS
+===================================================== -->
+
+<div style="margin-bottom: 25px;">
+
+    <h3 style="margin-bottom: 12px;">
+        Presentes principais
+    </h3>
+
+    <div style="
+        display: flex;
+        gap: 16px;
+        flex-wrap: wrap;
+    ">
+
+        <div style="
+            padding: 15px 22px;
+            border-radius: 10px;
+            background: var(--darkened-bg);
+            min-width: 110px;
+        ">
+            <div style="font-size: 13px;">
+                Fralda RN
+            </div>
+
+            <strong style="font-size: 24px;">
+                {{ fraldas_rn }}
+            </strong>
+        </div>
+
+
+        <div style="
+            padding: 15px 22px;
+            border-radius: 10px;
+            background: var(--darkened-bg);
+            min-width: 110px;
+        ">
+            <div style="font-size: 13px;">
+                Fralda P
+            </div>
+
+            <strong style="font-size: 24px;">
+                {{ fraldas_p }}
+            </strong>
+        </div>
+
+
+        <div style="
+            padding: 15px 22px;
+            border-radius: 10px;
+            background: var(--darkened-bg);
+            min-width: 110px;
+        ">
+            <div style="font-size: 13px;">
+                Fralda M
+            </div>
+
+            <strong style="font-size: 24px;">
+                {{ fraldas_m }}
+            </strong>
+        </div>
+
+
+        <div style="
+            padding: 15px 22px;
+            border-radius: 10px;
+            background: var(--darkened-bg);
+            min-width: 110px;
+        ">
+            <div style="font-size: 13px;">
+                Fralda G
+            </div>
+
+            <strong style="font-size: 24px;">
+                {{ fraldas_g }}
+            </strong>
+        </div>
+
+
+        <div style="
+            padding: 15px 22px;
+            border-radius: 10px;
+            background: var(--darkened-bg);
+            min-width: 140px;
+        ">
+            <div style="font-size: 13px;">
+                Lenço umedecido
+            </div>
+
+            <strong style="font-size: 24px;">
+                {{ itens_lenco }}
+            </strong>
+        </div>
+
+
+        <div style="
+            padding: 15px 22px;
+            border-radius: 10px;
+            background: var(--darkened-bg);
+            min-width: 110px;
+        ">
+            <div style="font-size: 13px;">
+                Pomada
+            </div>
+
+            <strong style="font-size: 24px;">
+                {{ itens_pomada }}
+            </strong>
+        </div>
+
+
+        <div style="
+            padding: 15px 22px;
+            border-radius: 10px;
+            background: var(--darkened-bg);
+            min-width: 160px;
+        ">
+            <div style="font-size: 13px;">
+                Total de presentes
+            </div>
+
+            <strong style="font-size: 24px;">
+                {{ total_itens_principais }}
+            </strong>
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- =====================================================
+     MIMOS
+===================================================== -->
+
+<div style="margin-bottom: 25px;">
+
+    <h3 style="margin-bottom: 12px;">
+        Mimos escolhidos
+    </h3>
+
+    <div style="
+        display: flex;
+        gap: 16px;
+        flex-wrap: wrap;
+    ">
+
+        <div style="
+            padding: 15px 22px;
+            border-radius: 10px;
+            background: var(--darkened-bg);
+            min-width: 120px;
+        ">
+            <div style="font-size: 13px;">Macacão</div>
+            <strong style="font-size: 24px;">
+                {{ mimos_macacao }}
+            </strong>
+        </div>
+
+
+        <div style="
+            padding: 15px 22px;
+            border-radius: 10px;
+            background: var(--darkened-bg);
+            min-width: 120px;
+        ">
+            <div style="font-size: 13px;">Body</div>
+            <strong style="font-size: 24px;">
+                {{ mimos_body }}
+            </strong>
+        </div>
+
+
+        <div style="
+            padding: 15px 22px;
+            border-radius: 10px;
+            background: var(--darkened-bg);
+            min-width: 120px;
+        ">
+            <div style="font-size: 13px;">Mijão</div>
+            <strong style="font-size: 24px;">
+                {{ mimos_mijao }}
+            </strong>
+        </div>
+
+
+        <div style="
+            padding: 15px 22px;
+            border-radius: 10px;
+            background: var(--darkened-bg);
+            min-width: 120px;
+        ">
+            <div style="font-size: 13px;">Meia</div>
+            <strong style="font-size: 24px;">
+                {{ mimos_meia }}
+            </strong>
+        </div>
+
+
+        <div style="
+            padding: 15px 22px;
+            border-radius: 10px;
+            background: var(--darkened-bg);
+            min-width: 120px;
+        ">
+            <div style="font-size: 13px;">Luvinha</div>
+            <strong style="font-size: 24px;">
+                {{ mimos_luvinha }}
+            </strong>
+        </div>
+
+
+        <div style="
+            padding: 15px 22px;
+            border-radius: 10px;
+            background: var(--darkened-bg);
+            min-width: 120px;
+        ">
+            <div style="font-size: 13px;">Touca</div>
+            <strong style="font-size: 24px;">
+                {{ mimos_touca }}
+            </strong>
+        </div>
+
+
+        <div style="
+            padding: 15px 22px;
+            border-radius: 10px;
+            background: var(--darkened-bg);
+            min-width: 120px;
+        ">
+            <div style="font-size: 13px;">Manta</div>
+            <strong style="font-size: 24px;">
+                {{ mimos_manta }}
+            </strong>
+        </div>
+
+
+        <div style="
+            padding: 15px 22px;
+            border-radius: 10px;
+            background: var(--darkened-bg);
+            min-width: 150px;
+        ">
+            <div style="font-size: 13px;">
+                Toalhinha de boca
+            </div>
+            <strong style="font-size: 24px;">
+                {{ mimos_toalhinha_boca }}
+            </strong>
+        </div>
+
+
+        <div style="
+            padding: 15px 22px;
+            border-radius: 10px;
+            background: var(--darkened-bg);
+            min-width: 140px;
+        ">
+            <div style="font-size: 13px;">
+                Toalha de banho
+            </div>
+            <strong style="font-size: 24px;">
+                {{ mimos_toalha_banho }}
+            </strong>
+        </div>
+
+
+        <div style="
+            padding: 15px 22px;
+            border-radius: 10px;
+            background: var(--darkened-bg);
+            min-width: 120px;
+        ">
+            <div style="font-size: 13px;">Outros</div>
+            <strong style="font-size: 24px;">
+                {{ mimos_outros }}
+            </strong>
+        </div>
+
+
+        <div style="
+            padding: 15px 22px;
+            border-radius: 10px;
+            background: var(--darkened-bg);
+            min-width: 140px;
+        ">
+            <div style="font-size: 13px;">
+                Total de mimos
+            </div>
+            <strong style="font-size: 24px;">
+                {{ total_mimos }}
+            </strong>
+        </div>
+
+    </div>
+
+</div>
+
+
+{{ block.super }}
+
+{% endblock %}
